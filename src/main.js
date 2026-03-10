@@ -110,7 +110,7 @@ function handlePrev(root) {
       phase: "MODULE",
       slides: moduleQs,
       slideIndex: moduleQs.length - 1,
-      slideOffset: CORE_QUESTIONS.length,
+      slideOffset: 0,
     });
     renderSlide();
     scrollToTop();
@@ -162,25 +162,25 @@ function advancePhase(root) {
       return;
     }
 
-    // Load module questions
+    // Load module questions (progress counter excludes core questions)
     const mod = getModule(routeKey);
-    const totalAll = CORE_QUESTIONS.length + mod.questions.length + CLOSING_QUESTIONS.length;
+    const totalAll = mod.questions.length + CLOSING_QUESTIONS.length;
     updateState({
       phase: "MODULE",
       slides: mod.questions,
       slideIndex: 0,
-      slideOffset: CORE_QUESTIONS.length,
+      slideOffset: 0,
       totalAllSlides: totalAll,
     });
     renderSlide();
     scrollToTop();
   } else if (state.phase === "MODULE") {
-    // Move to closing questions
+    // Move to closing questions (offset = number of module questions)
     updateState({
       phase: "CLOSING",
       slides: CLOSING_QUESTIONS,
       slideIndex: 0,
-      slideOffset: state.slideOffset + state.slides.length,
+      slideOffset: state.slides.length,
     });
     renderSlide();
     scrollToTop();
@@ -200,14 +200,14 @@ function handleModuleISelection(root, primaryKey, secondaryKey) {
   setAnswer("module_i_primary", primaryKey);
   setAnswer("module_i_secondary", secondaryKey);
 
-  // Build hybrid question set
+  // Build hybrid question set (progress counter excludes core questions)
   const hybridQs = buildHybridModule(primaryKey, secondaryKey);
-  const totalAll = CORE_QUESTIONS.length + hybridQs.length + CLOSING_QUESTIONS.length;
+  const totalAll = hybridQs.length + CLOSING_QUESTIONS.length;
   updateState({
     phase: "MODULE",
     slides: hybridQs,
     slideIndex: 0,
-    slideOffset: CORE_QUESTIONS.length,
+    slideOffset: 0,
     totalAllSlides: totalAll,
   });
   renderSlide();

@@ -164,8 +164,10 @@ Overall = weighted average of the four scores.
 CONTENT RULES FOR INSIGHTS AND RECOMMENDATIONS:
 - Each dimension insight should reference something specific from their answers. Say what is working and what the gap is.
 - In the executive summary (overall_summary), mention Archificials once naturally, for example: "Working with a team like Archificials on [specific area] could help you [specific outcome]." Do not make it sound like an ad. It should read like a helpful suggestion from an advisor.
-- In top_opportunities, make each one specific and actionable. At least one of the three should mention how Archificials could help with that particular area, woven in naturally (e.g., "Archificials can help you set up automated intake workflows that capture after-hours inquiries"). The other two can stand alone as practical next steps.
+- CRITICAL RULE FOR top_opportunities: Every single opportunity MUST start by positioning Archificials (or "we" / "our team") as the one helping. Vary the phrasing across the three items so it feels natural, not templated. Examples of good openers: "Archificials can help you consolidate...", "We can help you reduce...", "Our team excels at building...", "Archificials specializes in setting up...", "We can work with you to streamline...". Never start an opportunity with a generic imperative like "Build..." or "Reduce..." or "Consolidate..." directed at the client alone. Archificials is always part of the action.
+- Each opportunity should still be specific, actionable, and grounded in their actual answers.
 - The recommended_first_step should be a single, concrete action they could take in the next two weeks, and it should mention Archificials as the partner to help execute it.
+- After the three top_opportunities, include a "cta_line" field: a warm, conversational one-liner inviting them to schedule a free consultation to discuss their pain points and opportunities in more depth. This should feel like a friend suggesting a coffee chat, not a sales pitch. Vary the wording every time; never use the same phrasing twice. Examples of the right feel: "We would love to walk through these findings with you over a quick call, no strings attached.", "Let us set up a free 30-minute session to dig into what matters most for ${firmName}." Do not use hype words or corporate stiffness.
 - Never be generic. If you do not have enough information to be specific, say so honestly rather than padding with filler.
 
 Return ONLY valid JSON (no markdown, no code fences):
@@ -181,7 +183,8 @@ Return ONLY valid JSON (no markdown, no code fences):
   "insight_practice_readiness": "<1-2 sentence insight, warm and specific>",
   "recommended_first_step": "<specific action mentioning Archificials as partner>",
   "overall_summary": "<2-3 sentence executive summary, mention Archificials once naturally>",
-  "top_opportunities": ["<specific opportunity 1>", "<specific opportunity 2, mention Archificials naturally>", "<specific opportunity 3>"]
+  "top_opportunities": ["<opportunity starting with Archificials/we helping>", "<opportunity starting with Archificials/we helping>", "<opportunity starting with Archificials/we helping>"],
+  "cta_line": "<warm one-liner inviting a free consultation, varied each time>"
 }
 
 Remember: no em dashes anywhere in your output. Not one. Use commas, periods, or semicolons instead.`;

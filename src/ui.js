@@ -279,6 +279,7 @@ export function renderResults(scores) {
       ` : ""}
 
       <div class="af-cta">
+        ${scores.cta_line ? `<p class="af-cta-line">${escHtml(scores.cta_line)}</p>` : ""}
         <a href="${CONFIG.BRAND.website}" class="af-btn af-btn-primary" target="_blank" rel="noopener">
           Schedule Your Strategy Session
         </a>

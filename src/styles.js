@@ -348,6 +348,12 @@ export function injectStyles() {
       text-align: center;
       padding: 24px 0 16px;
     }
+    .af-cta-line {
+      font-size: 15px;
+      color: ${c.text};
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
     .af-cta p {
       font-size: 14px;
       color: ${c.textLight};

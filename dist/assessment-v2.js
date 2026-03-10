@@ -341,6 +341,12 @@ var ArchificialsAssessmentV2=(()=>{var l={VERSION:"2.0.0",WORKER_URL:"https://la
       text-align: center;
       padding: 24px 0 16px;
     }
+    .af-cta-line {
+      font-size: 15px;
+      color: ${r.text};
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
     .af-cta p {
       font-size: 14px;
       color: ${r.textLight};
@@ -456,6 +462,7 @@ var ArchificialsAssessmentV2=(()=>{var l={VERSION:"2.0.0",WORKER_URL:"https://la
       `:""}
 
       <div class="af-cta">
+        ${e.cta_line?`<p class="af-cta-line">${u(e.cta_line)}</p>`:""}
         <a href="${l.BRAND.website}" class="af-btn af-btn-primary" target="_blank" rel="noopener">
           Schedule Your Strategy Session
         </a>

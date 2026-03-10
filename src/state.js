@@ -26,6 +26,10 @@ export const state = {
   scores: null,
   error: null,
 
+  // Global progress tracking (across all phases)
+  slideOffset: 0,       // Number of questions completed in prior phases
+  totalAllSlides: 0,    // Total questions across all phases (core + module + closing)
+
   // UI state
   isSubmitting: false,
 };
@@ -45,7 +49,11 @@ export function setAnswer(id, value) {
 }
 
 export function getTotalSlides() {
-  return state.slides.length;
+  return state.totalAllSlides || state.slides.length;
+}
+
+export function getGlobalIndex() {
+  return state.slideOffset + state.slideIndex + 1;
 }
 
 export function getCurrentSlide() {
@@ -53,6 +61,7 @@ export function getCurrentSlide() {
 }
 
 export function getProgress() {
-  if (state.slides.length === 0) return 0;
-  return Math.round(((state.slideIndex + 1) / state.slides.length) * 100);
+  const total = state.totalAllSlides || state.slides.length;
+  if (total === 0) return 0;
+  return Math.round(((state.slideOffset + state.slideIndex + 1) / total) * 100);
 }

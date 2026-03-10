@@ -31,11 +31,13 @@ function mount() {
   injectStyles();
   setRoot(root);
 
-  // Start with core questions
+  // Start with core questions (totalAllSlides set once module is known)
   updateState({
     phase: "CORE",
     slideIndex: 0,
     slides: CORE_QUESTIONS,
+    slideOffset: 0,
+    totalAllSlides: 0,
   });
 
   renderSlide();
@@ -108,6 +110,7 @@ function handlePrev(root) {
       phase: "MODULE",
       slides: moduleQs,
       slideIndex: moduleQs.length - 1,
+      slideOffset: CORE_QUESTIONS.length,
     });
     renderSlide();
     scrollToTop();
@@ -117,6 +120,7 @@ function handlePrev(root) {
       phase: "CORE",
       slides: CORE_QUESTIONS,
       slideIndex: CORE_QUESTIONS.length - 1,
+      slideOffset: 0,
     });
     renderSlide();
     scrollToTop();
@@ -160,10 +164,13 @@ function advancePhase(root) {
 
     // Load module questions
     const mod = getModule(routeKey);
+    const totalAll = CORE_QUESTIONS.length + mod.questions.length + CLOSING_QUESTIONS.length;
     updateState({
       phase: "MODULE",
       slides: mod.questions,
       slideIndex: 0,
+      slideOffset: CORE_QUESTIONS.length,
+      totalAllSlides: totalAll,
     });
     renderSlide();
     scrollToTop();
@@ -173,6 +180,7 @@ function advancePhase(root) {
       phase: "CLOSING",
       slides: CLOSING_QUESTIONS,
       slideIndex: 0,
+      slideOffset: state.slideOffset + state.slides.length,
     });
     renderSlide();
     scrollToTop();
@@ -194,10 +202,13 @@ function handleModuleISelection(root, primaryKey, secondaryKey) {
 
   // Build hybrid question set
   const hybridQs = buildHybridModule(primaryKey, secondaryKey);
+  const totalAll = CORE_QUESTIONS.length + hybridQs.length + CLOSING_QUESTIONS.length;
   updateState({
     phase: "MODULE",
     slides: hybridQs,
     slideIndex: 0,
+    slideOffset: CORE_QUESTIONS.length,
+    totalAllSlides: totalAll,
   });
   renderSlide();
   scrollToTop();

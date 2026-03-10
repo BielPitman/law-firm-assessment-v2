@@ -10,6 +10,7 @@ import {
   getCurrentSlide,
   getProgress,
   getTotalSlides,
+  getGlobalIndex,
 } from "./state.js";
 import { DIM_IMAGES } from "./dimImages.js";
 
@@ -28,7 +29,7 @@ export function renderSlide() {
   if (!slide) return;
 
   const pct = getProgress();
-  const current = state.slideIndex + 1;
+  const current = getGlobalIndex();
   const total = getTotalSlides();
   const answer = state.answers[slide.id] ?? "";
 

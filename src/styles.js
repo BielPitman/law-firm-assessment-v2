@@ -281,9 +281,7 @@ export function injectStyles() {
     }
     .af-dim-img {
       width: 100%;
-      height: 140px;
       border-radius: 8px;
-      object-fit: cover;
       margin-bottom: 16px;
     }
     .af-dim-pct {

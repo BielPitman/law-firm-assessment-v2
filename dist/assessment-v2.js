@@ -274,9 +274,7 @@ var ArchificialsAssessmentV2=(()=>{var l={VERSION:"2.0.0",WORKER_URL:"https://la
     }
     .af-dim-img {
       width: 100%;
-      height: 140px;
       border-radius: 8px;
-      object-fit: cover;
       margin-bottom: 16px;
     }
     .af-dim-pct {

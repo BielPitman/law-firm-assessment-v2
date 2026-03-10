@@ -33,15 +33,19 @@ export function renderSlide() {
   const total = getTotalSlides();
   const answer = state.answers[slide.id] ?? "";
 
+  const showProgress = state.phase !== "CORE";
+
   root.innerHTML = `
     <div class="af-header">
       <h1>AI Readiness Assessment</h1>
       <p>${CONFIG.BRAND.tagline}</p>
     </div>
-    <div class="af-progress-text">Question ${current} of ${total}</div>
-    <div class="af-progress-wrap">
-      <div class="af-progress-bar" style="width:${pct}%"></div>
-    </div>
+    ${showProgress ? `
+      <div class="af-progress-text">Question ${current} of ${total}</div>
+      <div class="af-progress-wrap">
+        <div class="af-progress-bar" style="width:${pct}%"></div>
+      </div>
+    ` : ""}
     <div class="af-card">
       ${slide.category ? `<span class="af-category">${slide.category}</span>` : ""}
       <h2 class="af-question">${slide.question}</h2>

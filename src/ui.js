@@ -222,6 +222,27 @@ export function renderSubmitting() {
 // ─── Results display ────────────────────────────────────────────
 
 export function renderResults(scores) {
+  // Handle fallback / missing scores
+  if (!scores || scores.fallback || !scores.overall_score) {
+    root.innerHTML = `
+      <div class="af-header">
+        <h1>Thank You!</h1>
+        <p>${state.answers.firm_name || "Your Firm"} &middot; ${state.moduleName || "Assessment"}</p>
+      </div>
+      <div class="af-card">
+        <h2>Your Assessment Has Been Received</h2>
+        <p>We're preparing your personalized AI Readiness Report. You'll receive a detailed analysis at <strong>${state.answers.contact_email || "your email"}</strong> shortly.</p>
+        <div class="af-cta">
+          <a href="${CONFIG.BRAND.website}" class="af-btn af-btn-primary" target="_blank" rel="noopener">
+            Schedule Your Strategy Session
+          </a>
+        </div>
+      </div>
+      <div class="af-footer">&copy; ${new Date().getFullYear()} ${CONFIG.BRAND.name}</div>
+    `;
+    return;
+  }
+
   const tier = getTier(scores.overall_score);
 
   root.innerHTML = `

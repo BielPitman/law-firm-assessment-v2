@@ -512,7 +512,24 @@ var index_default = {
     }
 
     await Promise.all(tasks);
-    return jsonResponse(scores || { fallback: true });
+
+    // Reshape for the frontend UI (expects nested dimension objects)
+    if (scores) {
+      const shaped = {
+        overall_score: scores.overall ?? 0,
+        operational: { score: scores.operational ?? 0, insight: scores.insight_operational || "" },
+        acquisition: { score: scores.acquisition ?? 0, insight: scores.insight_acquisition || "" },
+        digital: { score: scores.digital ?? 0, insight: scores.insight_digital || "" },
+        practice_readiness: { score: scores.practice_readiness ?? 0, insight: scores.insight_practice_readiness || "" },
+        executive_summary: scores.overall_summary || "",
+        top_opportunities: scores.top_opportunities || [],
+        recommended_next_steps: scores.recommended_next_steps || [],
+        recommended_first_step: scores.recommended_first_step || "",
+      };
+      return jsonResponse(shaped);
+    }
+
+    return jsonResponse({ fallback: true });
   }
 };
 

@@ -279,11 +279,11 @@ export function injectStyles() {
       border-radius: 10px;
       padding: 20px;
     }
-    .af-dim-img-placeholder {
+    .af-dim-img {
       width: 48px;
       height: 48px;
       border-radius: 10px;
-      background: ${c.accent}22;
+      object-fit: cover;
       margin-bottom: 12px;
     }
     .af-dim-pct {

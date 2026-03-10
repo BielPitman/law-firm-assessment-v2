@@ -11,6 +11,7 @@ import {
   getProgress,
   getTotalSlides,
 } from "./state.js";
+import { DIM_IMAGES } from "./dimImages.js";
 
 const R = CONFIG.ROOT_ID;
 let root = null;
@@ -303,7 +304,7 @@ function renderDimension(name, data, key) {
   const barColor = getBarColor(score);
   return `
     <div class="af-dim-card">
-      <div class="af-dim-img-placeholder" data-dim="${key}"></div>
+      ${DIM_IMAGES[key] ? `<img class="af-dim-img" src="${DIM_IMAGES[key]}" alt="${name}">` : ""}
       <div class="af-dim-name">${name}</div>
       <div class="af-dim-score">${score}<span class="af-dim-pct">%</span></div>
       <div class="af-dim-bar">

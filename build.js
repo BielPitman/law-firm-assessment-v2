@@ -13,6 +13,7 @@ const buildOptions = {
   target: ["es2020"],
   minify: !watch,
   sourcemap: watch ? "inline" : false,
+  loader: { ".webp": "dataurl" },
   banner: {
     js: "/* Archificials Law Firm AI Readiness Assessment v2 | archificials.com */",
   },

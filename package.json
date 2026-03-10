@@ -1,0 +1,13 @@
+{
+  "name": "law-firm-assessment-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Archificials Law Firm AI Readiness Assessment v2 - Modular architecture with 9 practice area modules",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

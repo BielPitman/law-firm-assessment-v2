@@ -243,23 +243,17 @@ export function renderResults(scores) {
     return;
   }
 
-  const tier = getTier(scores.overall_score);
-
   root.innerHTML = `
     <div class="af-header">
       <h1>Your AI Readiness Report</h1>
       <p>${state.answers.firm_name || "Your Firm"} &middot; ${state.moduleName || "Assessment"}</p>
     </div>
     <div class="af-card af-results">
-      <p class="af-score-big">${scores.overall_score}</p>
-      <p class="af-score-label">AI Readiness Index</p>
-      <span class="af-tier-badge" style="background:${tier.color}">${tier.label}</span>
-
       <div class="af-dimensions">
-        ${renderDimension("Operational Efficiency", scores.operational, CONFIG.BRAND.color.accent)}
-        ${renderDimension("Client Acquisition", scores.acquisition, "#2a9d8f")}
-        ${renderDimension("Digital Visibility", scores.digital, "#f4a261")}
-        ${renderDimension("Practice Readiness", scores.practice_readiness, "#264653")}
+        ${renderDimension("Operational Efficiency", scores.operational, "operational")}
+        ${renderDimension("Client Acquisition", scores.acquisition, "acquisition")}
+        ${renderDimension("Digital Visibility", scores.digital, "digital")}
+        ${renderDimension("Practice Readiness", scores.practice_readiness, "practice_readiness")}
       </div>
 
       ${scores.executive_summary ? `
@@ -293,16 +287,27 @@ export function renderResults(scores) {
   `;
 }
 
-function renderDimension(name, data, color) {
+function getBarColor(score) {
+  // Orange gradient: lighter for low scores, deeper for high scores
+  if (score < 30) return "#f4c089";      // light orange
+  if (score < 50) return "#f0a050";      // medium-light orange
+  if (score < 70) return "#e27308";      // brand orange
+  if (score < 85) return "#c96407";      // deeper orange
+  return "#a85206";                       // darkest orange
+}
+
+function renderDimension(name, data, key) {
   if (!data) return "";
   const score = data.score ?? 0;
   const insight = data.insight || "";
+  const barColor = getBarColor(score);
   return `
     <div class="af-dim-card">
+      <div class="af-dim-img-placeholder" data-dim="${key}"></div>
       <div class="af-dim-name">${name}</div>
-      <div class="af-dim-score">${score}</div>
+      <div class="af-dim-score">${score}<span class="af-dim-pct">%</span></div>
       <div class="af-dim-bar">
-        <div class="af-dim-fill" style="width:${score}%; background:${color}"></div>
+        <div class="af-dim-fill" style="width:${score}%; background:${barColor}"></div>
       </div>
       ${insight ? `<div class="af-dim-insight">${escHtml(insight)}</div>` : ""}
     </div>

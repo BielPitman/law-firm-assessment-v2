@@ -146,11 +146,11 @@ export function injectStyles() {
     }
     .af-option:hover {
       border-color: ${c.accent};
-      background: #fff5f6;
+      background: #fff8f0;
     }
     .af-option.selected {
       border-color: ${c.accent};
-      background: #ffe8ec;
+      background: #fff0e0;
       font-weight: 600;
     }
 
@@ -177,7 +177,7 @@ export function injectStyles() {
     }
     .af-scale-btn:hover {
       border-color: ${c.accent};
-      background: #fff5f6;
+      background: #fff8f0;
     }
     .af-scale-btn.selected {
       border-color: ${c.accent};
@@ -265,27 +265,6 @@ export function injectStyles() {
     .af-results {
       text-align: center;
     }
-    .af-score-big {
-      font-size: 72px;
-      font-weight: 800;
-      color: ${c.primary};
-      margin: 0;
-      line-height: 1;
-    }
-    .af-score-label {
-      font-size: 16px;
-      color: ${c.textLight};
-      margin: 4px 0 8px;
-    }
-    .af-tier-badge {
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 32px;
-    }
 
     /* Dimension scores */
     .af-dimensions {
@@ -299,6 +278,18 @@ export function injectStyles() {
       background: ${c.bg};
       border-radius: 10px;
       padding: 20px;
+    }
+    .af-dim-img-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: ${c.accent}22;
+      margin-bottom: 12px;
+    }
+    .af-dim-pct {
+      font-size: 18px;
+      font-weight: 600;
+      margin-left: 1px;
     }
     .af-dim-name {
       font-size: 13px;

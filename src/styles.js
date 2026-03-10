@@ -280,11 +280,11 @@ export function injectStyles() {
       padding: 20px;
     }
     .af-dim-img {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
       object-fit: cover;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .af-dim-pct {
       font-size: 18px;

@@ -125,7 +125,18 @@ Practice Area Module: Multi-Practice & General Counsel
 - Biggest bottleneck: ${a.bottleneck_multi || "N/A"}`;
   }
 
-  return `You are an AI readiness analyst for law firms. Score this firm based on their assessment responses.
+  const firmName = a.firm_name || "your firm";
+  const contactFirst = (a.contact_name || "").split(" ")[0] || "";
+
+  return `You are writing the results section of an AI readiness assessment for a law firm. Your audience is ${contactFirst || "the person"} at ${firmName}. They just completed the assessment and will read your analysis immediately.
+
+TONE AND VOICE RULES (follow strictly):
+- Write as if you are speaking directly to ${contactFirst || "them"}. Use "you" and "your" naturally. Occasionally reference "${firmName}" by name instead of "you/your" for variety, but never say "the firm" or "the practice."
+- ${contactFirst ? `Use "${contactFirst}" by name once or twice across all your text, placed naturally (not forced), to make the report feel personal. Vary where you use it so it does not feel templated.` : "Do not reference any name since none was provided."}
+- Be warm, direct, and conversational. Write the way a trusted advisor would speak in a strategy meeting, not a corporate report. Avoid stiff or clinical phrasing.
+- ABSOLUTE RULE: Never use em dashes. Not a single one. Use commas, periods, semicolons, or rewrite the sentence instead. This is non-negotiable.
+- Never use hype words (revolutionary, cutting-edge, game-changing, transformative, unlock, supercharge, leverage, etc.). Stick to plain, specific language.
+- Keep sentences short and concrete. Ground every observation in something they actually said in their answers.
 
 Firm Profile:
 - Firm name: ${a.firm_name || "N/A"}
@@ -142,13 +153,20 @@ Closing Questions:
 - Success vision: ${a.success_vision || "N/A"}
 - Additional context: ${a.anything_else || "N/A"}
 
-Score this firm on four dimensions (0-100 each):
-1. Operational Efficiency (35% weight): How well the firm manages workflows, case tracking, document handling, and internal processes. Consider their bottlenecks, intake speed, and module-specific operational answers.
-2. Client Acquisition (25% weight): How effectively the firm attracts and converts new clients. Consider their client sources, after-hours availability, and intake processes.
-3. Digital Visibility (20% weight): The firm's online presence, digital marketing maturity, and discoverability. Consider their digital presence answers and practice-area-specific digital indicators.
-4. Practice Readiness (20% weight): How prepared the firm is to adopt AI and modern technology in their specific practice area. Consider their current processes, technology comfort, and openness to change.
+Score on four dimensions (0-100 each):
+1. Operational Efficiency (35% weight): How well workflows, case tracking, document handling, and internal processes are managed. Consider bottlenecks, intake speed, and module-specific operational answers.
+2. Client Acquisition (25% weight): How effectively new clients are attracted and converted. Consider client sources, after-hours availability, and intake processes.
+3. Digital Visibility (20% weight): Online presence, digital marketing maturity, and discoverability. Consider digital presence answers and practice-area-specific indicators.
+4. Practice Readiness (20% weight): How prepared the practice is to adopt AI and modern tools. Consider current processes, technology comfort, and openness to change.
 
 Overall = weighted average of the four scores.
+
+CONTENT RULES FOR INSIGHTS AND RECOMMENDATIONS:
+- Each dimension insight should reference something specific from their answers. Say what is working and what the gap is.
+- In the executive summary (overall_summary), mention Archificials once naturally, for example: "Working with a team like Archificials on [specific area] could help you [specific outcome]." Do not make it sound like an ad. It should read like a helpful suggestion from an advisor.
+- In top_opportunities, make each one specific and actionable. At least one of the three should mention how Archificials could help with that particular area, woven in naturally (e.g., "Archificials can help you set up automated intake workflows that capture after-hours inquiries"). The other two can stand alone as practical next steps.
+- The recommended_first_step should be a single, concrete action they could take in the next two weeks, and it should mention Archificials as the partner to help execute it.
+- Never be generic. If you do not have enough information to be specific, say so honestly rather than padding with filler.
 
 Return ONLY valid JSON (no markdown, no code fences):
 {
@@ -157,16 +175,16 @@ Return ONLY valid JSON (no markdown, no code fences):
   "digital": <int 0-100>,
   "practice_readiness": <int 0-100>,
   "overall": <int 0-100>,
-  "insight_operational": "<1-2 sentence insight>",
-  "insight_acquisition": "<1-2 sentence insight>",
-  "insight_digital": "<1-2 sentence insight>",
-  "insight_practice_readiness": "<1-2 sentence insight>",
-  "recommended_first_step": "<specific, actionable first step Archificials could help implement>",
-  "overall_summary": "<2-3 sentence executive summary of the firm's AI readiness>",
-  "top_opportunities": ["<opportunity 1>", "<opportunity 2>", "<opportunity 3>"]
+  "insight_operational": "<1-2 sentence insight, warm and specific>",
+  "insight_acquisition": "<1-2 sentence insight, warm and specific>",
+  "insight_digital": "<1-2 sentence insight, warm and specific>",
+  "insight_practice_readiness": "<1-2 sentence insight, warm and specific>",
+  "recommended_first_step": "<specific action mentioning Archificials as partner>",
+  "overall_summary": "<2-3 sentence executive summary, mention Archificials once naturally>",
+  "top_opportunities": ["<specific opportunity 1>", "<specific opportunity 2, mention Archificials naturally>", "<specific opportunity 3>"]
 }
 
-Be specific to the firm's practice area in your insights. Reference their actual answers. Frame opportunities in terms of what Archificials can help implement.`;
+Remember: no em dashes anywhere in your output. Not one. Use commas, periods, or semicolons instead.`;
 }
 
 // ─── Score Tier ──────────────────────────────────────────────────────────────

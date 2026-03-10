@@ -161,8 +161,17 @@ Score on four dimensions (0-100 each):
 
 Overall = weighted average of the four scores.
 
-CONTENT RULES FOR INSIGHTS AND RECOMMENDATIONS:
-- Each dimension insight should reference something specific from their answers. Say what is working and what the gap is.
+CRITICAL RULES FOR DIMENSION INSIGHTS (insight_operational, insight_acquisition, insight_digital, insight_practice_readiness):
+- Each of the four dimension insights MUST start with a DIFFERENT opener. You have four insights; use four distinct sentence structures. NEVER start two insights the same way.
+- BANNED first words: Do NOT start any insight with "You", "Your", or "You've". These are overused and feel robotic when repeated across four cards.
+- Instead, vary openers across these categories (pick one from each category for each insight, never repeating a category):
+  * Start with the firm name: "${firmName} has built...", "${firmName} is already ahead on...", "${firmName}'s approach to..."
+  ${contactFirst ? `* Start with the contact's name: "${contactFirst}, the way you handle...", "${contactFirst}, one area worth looking at..."` : ""}
+  * Start with a specific observation: "The after-hours intake process here is...", "Having templates in place for...", "A week-long intake cycle means..."
+  * Start with a strength: "Strong use of technology in...", "Having an emergency line already gives...", "Template-based drafting is a solid foundation..."
+  * Start with the gap or opportunity: "The biggest bottleneck right now is...", "Without active digital outreach...", "Portfolio management is the missing piece..."
+  * Start with a contrast: "On one hand, the research workflow is solid. On the other...", "While intake is covered after hours, the speed of..."
+- Each insight should still reference something specific from their answers and describe what is working and what the gap is.
 - In the executive summary (overall_summary), mention Archificials once naturally, for example: "Working with a team like Archificials on [specific area] could help you [specific outcome]." Do not make it sound like an ad. It should read like a helpful suggestion from an advisor.
 - CRITICAL RULE FOR top_opportunities: Every single opportunity MUST start by positioning Archificials (or "we" / "our team") as the one helping. Vary the phrasing across the three items so it feels natural, not templated. Examples of good openers: "Archificials can help you consolidate...", "We can help you reduce...", "Our team excels at building...", "Archificials specializes in setting up...", "We can work with you to streamline...". Never start an opportunity with a generic imperative like "Build..." or "Reduce..." or "Consolidate..." directed at the client alone. Archificials is always part of the action.
 - Each opportunity should still be specific, actionable, and grounded in their actual answers.
@@ -177,10 +186,10 @@ Return ONLY valid JSON (no markdown, no code fences):
   "digital": <int 0-100>,
   "practice_readiness": <int 0-100>,
   "overall": <int 0-100>,
-  "insight_operational": "<1-2 sentence insight, warm and specific>",
-  "insight_acquisition": "<1-2 sentence insight, warm and specific>",
-  "insight_digital": "<1-2 sentence insight, warm and specific>",
-  "insight_practice_readiness": "<1-2 sentence insight, warm and specific>",
+  "insight_operational": "<1-2 sentences, NEVER start with You/Your/You've, use a unique opener>",
+  "insight_acquisition": "<1-2 sentences, DIFFERENT opener from operational, no You/Your/You've>",
+  "insight_digital": "<1-2 sentences, DIFFERENT opener from the above two, no You/Your/You've>",
+  "insight_practice_readiness": "<1-2 sentences, DIFFERENT opener from all above, no You/Your/You've>",
   "recommended_first_step": "<specific action mentioning Archificials as partner>",
   "overall_summary": "<2-3 sentence executive summary, mention Archificials once naturally>",
   "top_opportunities": ["<opportunity starting with Archificials/we helping>", "<opportunity starting with Archificials/we helping>", "<opportunity starting with Archificials/we helping>"],

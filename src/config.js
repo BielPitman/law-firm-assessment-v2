@@ -1,6 +1,6 @@
 export const CONFIG = {
   VERSION: "2.0.0",
-  WORKER_URL: "https://law-firm-ai-scorer-v2.archificials.workers.dev",
+  WORKER_URL: "https://law-firm-ai-scorer-v2.law-firm-ai-scorer.workers.dev",
   ROOT_ID: "ach-af-v2",
   BRAND: {
     name: "Archificials",

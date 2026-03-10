@@ -230,10 +230,10 @@ async function submitAssessment(root) {
 
   try {
     const payload = {
+      ...state.answers,
       version: CONFIG.VERSION,
       practice_area: state.moduleName,
       module_key: state.selectedModule,
-      answers: state.answers,
       timestamp: new Date().toISOString(),
     };
 

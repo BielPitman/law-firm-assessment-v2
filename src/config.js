@@ -8,8 +8,8 @@ export const CONFIG = {
     website: "https://www.archificials.com",
     color: {
       primary: "#1a1a2e",
-      accent: "#e94560",
-      accentHover: "#d63d56",
+      accent: "#e27308",
+      accentHover: "#c96407",
       bg: "#f8f9fa",
       card: "#ffffff",
       text: "#1a1a2e",
@@ -21,7 +21,7 @@ export const CONFIG = {
   },
   // Scoring tier thresholds
   TIERS: [
-    { max: 40, label: "Significant Opportunity", color: "#e94560" },
+    { max: 40, label: "Significant Opportunity", color: "#e27308" },
     { max: 65, label: "Strong Opportunity", color: "#f4a261" },
     { max: 80, label: "Building Readiness", color: "#2a9d8f" },
     { max: 101, label: "Practice Leader", color: "#264653" },

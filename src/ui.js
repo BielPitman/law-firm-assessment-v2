@@ -213,7 +213,7 @@ export function renderSubmitting() {
     <div class="af-card af-submitting">
       <div class="af-spinner"></div>
       <h2 class="af-question">Analyzing your responses</h2>
-      <p class="af-subtitle">Our AI is building your personalized readiness report. This typically takes 15-30 seconds.</p>
+      <p class="af-subtitle">We're building your personalized readiness report. This typically takes 15-30 seconds.</p>
     </div>
     <div class="af-footer">&copy; ${new Date().getFullYear()} ${CONFIG.BRAND.name}</div>
   `;

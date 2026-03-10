@@ -474,7 +474,6 @@ var ArchificialsAssessmentV2=(()=>{var r={VERSION:"2.0.0",WORKER_URL:"https://la
         <a href="${r.BRAND.website}" class="af-btn af-btn-primary" target="_blank" rel="noopener">
           Schedule Your Strategy Session
         </a>
-        <p>A detailed report has been sent to ${n.answers.contact_email||"your email"}.</p>
       </div>
     </div>
     <div class="af-footer">&copy; ${new Date().getFullYear()} ${r.BRAND.name}</div>

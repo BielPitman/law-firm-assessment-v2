@@ -287,7 +287,6 @@ export function renderResults(scores) {
         <a href="${CONFIG.BRAND.website}" class="af-btn af-btn-primary" target="_blank" rel="noopener">
           Schedule Your Strategy Session
         </a>
-        <p>A detailed report has been sent to ${state.answers.contact_email || "your email"}.</p>
       </div>
     </div>
     <div class="af-footer">&copy; ${new Date().getFullYear()} ${CONFIG.BRAND.name}</div>

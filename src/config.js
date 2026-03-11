@@ -4,7 +4,7 @@ export const CONFIG = {
   ROOT_ID: "ach-af-v2",
   BRAND: {
     name: "Archificials",
-    tagline: "AI Integration for Law Firms",
+    tagline: "Powered by Archificials",
     website: "https://www.archificials.com",
     color: {
       primary: "#1a1a2e",

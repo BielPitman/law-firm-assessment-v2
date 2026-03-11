@@ -37,7 +37,7 @@ export function renderSlide() {
 
   root.innerHTML = `
     <div class="af-header">
-      <h1>AI Readiness Assessment</h1>
+      <h1>How AI-Ready Is Your Practice?</h1>
       <p>${CONFIG.BRAND.tagline}</p>
     </div>
     ${showProgress ? `
@@ -210,7 +210,7 @@ function updateNextBtn(slide) {
 export function renderSubmitting() {
   root.innerHTML = `
     <div class="af-header">
-      <h1>AI Readiness Assessment</h1>
+      <h1>How AI-Ready Is Your Practice?</h1>
       <p>${CONFIG.BRAND.tagline}</p>
     </div>
     <div class="af-progress-wrap">
@@ -326,7 +326,7 @@ function renderDimension(name, data, key) {
 export function renderError(msg) {
   root.innerHTML = `
     <div class="af-header">
-      <h1>AI Readiness Assessment</h1>
+      <h1>How AI-Ready Is Your Practice?</h1>
       <p>${CONFIG.BRAND.tagline}</p>
     </div>
     <div class="af-card" style="text-align:center">
@@ -348,7 +348,7 @@ export function renderError(msg) {
 export function renderModuleIPicker(options) {
   root.innerHTML = `
     <div class="af-header">
-      <h1>AI Readiness Assessment</h1>
+      <h1>How AI-Ready Is Your Practice?</h1>
       <p>${CONFIG.BRAND.tagline}</p>
     </div>
     <div class="af-progress-text">Customizing your assessment</div>

@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness &amp; Strategic Roadmap: Howry Breen &amp; Herman, LLP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            orange: '#C9640B',
+                            orangeDark: '#8B4507',
+                            orangeMed: '#D4891F',
+                            orangeLight: '#E8A84C',
+                            orangePale: '#F0C896',
+                            orangeTint: 'rgba(201,100,11,0.08)',
+                            grey: '#808182',
+                            platinum: '#EBEBEB',
+                            graphite: '#333333',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #EBEBEB; color: #333333; }
+        .card-shadow { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
+        .section-hero { position: relative; width: 100%; height: 280px; overflow: hidden; background-color: #000000; }
+        .section-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+        .section-hero .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.55) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem 3rem; }
+        .section-hero .hero-overlay h3 { color: #FFFFFF; font-size: 1.875rem; font-weight: 700; margin: 0; }
+        .section-hero .hero-overlay p { color: #EBEBEB; font-size: 0.875rem; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .section-hero .hero-overlay .hero-accent { width: 60px; height: 4px; background-color: #C9640B; margin-bottom: 0.75rem; }
+        @media (min-width: 768px) { .section-hero { height: 300px; } }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 340px; }
+        .chart-container-sm { position: relative; width: 100%; height: 260px; }
+        .tag-advanced { background-color: #8B4507; color: white; }
+        .tag-developing { background-color: #C9640B; color: white; }
+        .tag-early { background-color: #808182; color: white; }
+        .tag-legacy { background-color: #EBEBEB; color: #333333; border: 1px solid #808182; }
+        .tool-replace-yes { background-color: #e6f4ea; color: #1a7a2a; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; }
+        .tool-replace-no { background-color: #fce8e6; color: #8b1a14; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; }
+        .tool-replace-partial { background-color: #fff3cd; color: #856404; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; }
+        .metric-link { color: inherit; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(201,100,11,0.5); text-underline-offset: 3px; }
+        .metric-link:hover { text-decoration-color: #C9640B; }
+        .scenario-card { border: 1px solid #EBEBEB; background-color: #FFFFFF; }
+    </style>
+</head>
+<body class="font-sans antialiased pb-24">
+
+    <!-- HEADER -->
+    <header class="relative overflow-hidden border-b-8 border-brand-orange" style="min-height: 440px; background-color: #000000;">
+        <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/cover-hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" style="opacity: 0.82;">
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.35) 100%);"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-16 flex flex-col justify-end" style="min-height: 440px;">
+            <div class="text-brand-orange font-bold tracking-wider uppercase text-sm mb-3">&#9881; Archificials Strategic Assessment &mdash; Confidential</div>
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight text-white">AI Readiness &amp; Strategic Roadmap</h1>
+            <h2 class="text-2xl font-light" style="color:#EBEBEB;">Howry Breen &amp; Herman, LLP &nbsp;|&nbsp; Austin, Texas</h2>
+            <div class="flex flex-wrap gap-6 mt-8">
+                <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center">
+                    <div class="text-3xl font-black text-white">47<span class="text-lg font-normal text-brand-orange">/100</span></div>
+                    <div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">Overall Readiness</div>
+                </div>
+                <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center">
+                    <div class="text-3xl font-black text-brand-orange">3</div>
+                    <div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">Phases: Protect &middot; Propel &middot; Presence</div>
+                </div>
+                <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center">
+                    <div class="text-3xl font-black text-brand-orange">5&ndash;8 mo</div>
+                    <div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">Est. Payback</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 md:px-12 mt-12 space-y-20">
+
+        <!-- SECTION 1: MARKET CONDITIONS -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-market.webp" alt="Market Conditions">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Market Conditions</h3>
+                <p>Legal AI Adoption &amp; Industry Benchmarks, 2026</p>
+            </div>
+        </div>
+
+        <section id="market">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">1. Market Conditions</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">The legal AI software market is projected to reach <a href="https://www.grandviewresearch.com/industry-analysis/legal-ai-market-report" target="_blank" class="metric-link">$5.59 billion in 2026</a> and grow to $10.82 billion by 2030, compounding at a <a href="https://www.grandviewresearch.com/industry-analysis/legal-ai-market-report" target="_blank" class="metric-link">28.3% CAGR</a>. Individual adoption has more than doubled in 12 months: <a href="https://www.lawnext.com/2026/03/ai-adoption-among-legal-professionals-has-more-than-doubled-in-a-year-new-8am-report-finds-but-firms-lag-far-behind-individual-practitioners.html" target="_blank" class="metric-link">69% of legal professionals</a> now use AI tools for work, up from 31% in 2025. Among personal injury practices specifically, <a href="https://eciks.org/5590-94481-injury-lawyer-market-grows-competitive-in-2026-as-firms-adopt-ai-technology" target="_blank" class="metric-link">more than 60% of firms</a> actively use AI for case management and intake. The critical gap: <a href="https://www.lawnext.com/2026/03/ai-adoption-among-legal-professionals-has-more-than-doubled-in-a-year-new-8am-report-finds-but-firms-lag-far-behind-individual-practitioners.html" target="_blank" class="metric-link">only 9% of firms</a> have a written, actively enforced AI policy. That governance vacuum is the competitive window Howry Breen &amp; Herman can claim.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#000000;">
+                        <div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Legal AI Market 2026</div>
+                        <div class="text-3xl font-black mt-2" style="color:#000000;"><a href="https://www.grandviewresearch.com/industry-analysis/legal-ai-market-report" target="_blank" class="metric-link">$5.59B</a></div>
+                        <div class="text-sm text-brand-grey mt-1">Growing to $10.82B by 2030</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#C9640B;">
+                        <div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Annual Growth Rate</div>
+                        <div class="text-3xl font-black mt-2" style="color:#C9640B;"><a href="https://www.grandviewresearch.com/industry-analysis/legal-ai-market-report" target="_blank" class="metric-link">28.3%</a></div>
+                        <div class="text-sm text-brand-grey mt-1">CAGR through 2030</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#8B4507;">
+                        <div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Legal Pro AI Adoption</div>
+                        <div class="text-3xl font-black mt-2" style="color:#8B4507;"><a href="https://www.lawnext.com/2026/03/ai-adoption-among-legal-professionals-has-more-than-doubled-in-a-year-new-8am-report-finds-but-firms-lag-far-behind-individual-practitioners.html" target="_blank" class="metric-link">69%</a></div>
+                        <div class="text-sm text-brand-grey mt-1">Doubled from 31% in 2025</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#D4891F;">
+                        <div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Revenue Growth Advantage</div>
+                        <div class="text-3xl font-black mt-2" style="color:#D4891F;"><a href="https://eciks.org/5590-94481-injury-lawyer-market-grows-competitive-in-2026-as-firms-adopt-ai-technology" target="_blank" class="metric-link">3x</a></div>
+                        <div class="text-sm text-brand-grey mt-1">More likely if AI-adopting firm</div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h4 class="text-lg font-bold text-center mb-1">The Governance Gap</h4>
+                    <p class="text-sm text-brand-grey text-center mb-4">69% of legal professionals use AI. Only 9% have a written, enforced policy. The firms that close this gap first earn the compliance posture their rivals cannot match.</p>
+                    <div class="chart-container-sm">
+                        <canvas id="marketChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: FIRM OPERATIONAL PROFILE -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-results.webp" alt="Firm Profile">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Howry Breen &amp; Herman Operational Profile</h3>
+                <p>AI Maturity Assessment &amp; Readiness Scores</p>
+            </div>
+        </div>
+
+        <section id="readiness">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">2. Howry Breen &amp; Herman Operational Profile</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Overall score of <strong>47/100</strong> places the firm at the inflection point: not behind the curve, but at the moment where early movers separate from the field. Practice Readiness (68/100) is the strongest asset: partners who understand the problem and are ready to act. Client Acquisition (38/100) is the most urgent gap, directly addressable in the first 90 days.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 bg-white p-8 rounded-xl card-shadow mb-10">
+                <div class="md:col-span-3">
+                    <h4 class="text-lg font-bold text-center mb-1">Readiness Scores vs. Industry Benchmark</h4>
+                    <p class="text-sm text-brand-grey text-center mb-4">Mid-size PI firms scoring 55+ in all four dimensions are pulling away from referral-dependent peers.</p>
+                    <div class="chart-container">
+                        <canvas id="readinessChart"></canvas>
+                    </div>
+                </div>
+                <div class="md:col-span-2 flex flex-col justify-center space-y-4">
+                    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#8B4507; background:rgba(139,69,7,0.07);">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-brand-black">Client Acquisition</div>
+                            <div class="text-2xl font-black" style="color:#8B4507;">38<span class="text-sm font-normal text-brand-grey">/100</span></div>
+                        </div>
+                        <div class="text-sm text-brand-graphite mt-1">Most urgent gap. No CRM, no pipeline tracking, no systematic follow-up. A Lawmatics CRM deployment directly addresses this within 30 days.</div>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#C9640B; background:rgba(201,100,11,0.07);">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-brand-black">Operational Efficiency</div>
+                            <div class="text-2xl font-black" style="color:#C9640B;">42<span class="text-sm font-normal text-brand-grey">/100</span></div>
+                        </div>
+                        <div class="text-sm text-brand-graphite mt-1">Medical record review consumes disproportionate attorney and paralegal time. AI-assisted review and custom workflow modules close this gap.</div>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#D4891F; background:rgba(212,137,31,0.07);">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-brand-black">Digital Visibility</div>
+                            <div class="text-2xl font-black" style="color:#D4891F;">55<span class="text-sm font-normal text-brand-grey">/100</span></div>
+                        </div>
+                        <div class="text-sm text-brand-graphite mt-1">Existing results page and case history are strong AEO raw material. Structured content architecture converts them into AI citations.</div>
+                    </div>
+                    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#E8A84C; background:rgba(232,168,76,0.1);">
+                        <div class="flex justify-between items-center">
+                            <div class="font-bold text-brand-black">Practice Readiness</div>
+                            <div class="text-2xl font-black" style="color:#E8A84C;">68<span class="text-sm font-normal text-brand-grey">/100</span></div>
+                        </div>
+                        <div class="text-sm text-brand-graphite mt-1">Strongest dimension. Partners understand the problem and are ready to move. Reduces adoption risk significantly.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shadow AI Problem -->
+            <div class="bg-black text-white p-6 rounded-xl card-shadow mb-6 flex items-start gap-4">
+                <div class="text-3xl mt-1 shrink-0">&#9888;</div>
+                <div>
+                    <div class="font-bold text-brand-orange text-lg mb-1">Shadow AI: An Existing Liability</div>
+                    <p class="text-sm leading-relaxed" style="color:#EBEBEB;">Some partners at Howry Breen &amp; Herman already use Claude for drafting and research. That is the right instinct in the wrong configuration. Consumer Claude accounts (individual Pro subscriptions) offer no data isolation, no SOC2 compliance, no zero-retention guarantee, and no audit trail. Under ABA Opinion 512 and Texas Bar Opinion 705, this creates attorney-client privilege exposure today. TRAIGA, in effect since January 1, 2026, classifies Howry Breen &amp; Herman as an AI "deployer" regardless of whether the firm has a formal program. The correct response is not to stop using AI. It is to migrate to a governed environment first.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-brand-orange font-bold mb-2">The Cost Delta</div>
+                        <p class="text-sm text-brand-graphite">Ten individual Claude Pro accounts at $20/month each = $2,400/year. Ten Claude Enterprise seats = approximately $3,000&ndash;$3,600/year. For roughly $50&ndash;$100 per month more, the compliance exposure disappears entirely.</p>
+                    </div>
+                    <div>
+                        <div class="text-brand-orange font-bold mb-2">What Changes at the Firm</div>
+                        <p class="text-sm text-brand-graphite">Rather than asking partners to abandon a tool they use and trust, the first conversation validates their behavior and builds on it. Attorneys who have been using Claude arrive at Phase 02 with AI fluency already built.</p>
+                    </div>
+                    <div>
+                        <div class="text-brand-orange font-bold mb-2">Competitive Signal</div>
+                        <p class="text-sm text-brand-graphite">No Austin PI peer has formal AI governance in place. The first firm to move from informal use to a documented, governed deployment earns a compliance posture that becomes a credible differentiator with referring attorneys and sophisticated clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: COMPETITIVE LANDSCAPE -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/theme-competitive-edge.webp" alt="Competitive Landscape">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Competitive Landscape: Austin</h3>
+                <p>PI Market &amp; First-Mover Window</p>
+            </div>
+        </div>
+
+        <section id="competitors">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">3. Competitive Landscape: Austin, Texas</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Among direct Austin PI peers, no competitor has a documented formal AI program. The threat from Thomas J. Henry is scale-based, not technology-based at the peer level. Howry Breen &amp; Herman has a genuine first-mover window in its actual competitive market. The firm that moves from informal AI use to a governed, structured deployment first claims a compliance and credibility posture that peers cannot quickly replicate.</p>
+
+            <div class="overflow-x-auto bg-white rounded-xl card-shadow mb-8">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-black text-white">
+                            <th class="p-4 font-semibold">Firm</th>
+                            <th class="p-4 font-semibold">AI Maturity</th>
+                            <th class="p-4 font-semibold">Known AI Initiatives</th>
+                            <th class="p-4 font-semibold">Market</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-brand-platinum">
+                        <tr class="hover:bg-brand-orangeTint transition-colors">
+                            <td class="p-4 font-bold text-brand-black">Thomas J. Henry Law</td>
+                            <td class="p-4"><span class="tag-advanced px-3 py-1 rounded-full text-xs font-bold uppercase">Advanced</span></td>
+                            <td class="p-4 text-sm text-brand-graphite">Dedicated legal tech infrastructure; aggressive digital marketing; LSA presence across all TX markets</td>
+                            <td class="p-4 text-sm text-brand-grey">Austin + Statewide</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint transition-colors">
+                            <td class="p-4 font-bold text-brand-black">Watts Guerra LLP</td>
+                            <td class="p-4"><span class="tag-developing px-3 py-1 rounded-full text-xs font-bold uppercase">Early-Developing</span></td>
+                            <td class="p-4 text-sm text-brand-graphite">Mass tort / catastrophic injury focus; monitoring Bloomberg Law AI billing developments; no confirmed tool deployments</td>
+                            <td class="p-4 text-sm text-brand-grey">Austin</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint transition-colors">
+                            <td class="p-4 font-bold text-brand-black">Byrd Davis Alden &amp; Henrichson</td>
+                            <td class="p-4"><span class="tag-early px-3 py-1 rounded-full text-xs font-bold uppercase">Early</span></td>
+                            <td class="p-4 text-sm text-brand-graphite">Long-tenured general PI firm; no public AI initiatives identified</td>
+                            <td class="p-4 text-sm text-brand-grey">Austin</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint transition-colors">
+                            <td class="p-4 font-bold text-brand-black">Winckler &amp; Harvey LLP</td>
+                            <td class="p-4"><span class="tag-early px-3 py-1 rounded-full text-xs font-bold uppercase">Early</span></td>
+                            <td class="p-4 text-sm text-brand-graphite">Board-certified PI specialists (TX Board of Legal Specialization); no public AI infrastructure</td>
+                            <td class="p-4 text-sm text-brand-grey">Austin</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint transition-colors">
+                            <td class="p-4 font-bold text-brand-black">AZA Law</td>
+                            <td class="p-4"><span class="tag-advanced px-3 py-1 rounded-full text-xs font-bold uppercase">Advanced</span></td>
+                            <td class="p-4 text-sm text-brand-graphite">Harvey AI deployed to 75% of attorneys; AI provides documented competitive edge in trial strategy</td>
+                            <td class="p-4 text-sm text-brand-grey">Houston (State-level)</td>
+                        </tr>
+                        <tr style="background: rgba(201,100,11,0.1);">
+                            <td class="p-4 font-bold" style="color:#8B4507;">Howry Breen &amp; Herman</td>
+                            <td class="p-4"><span class="tag-legacy px-3 py-1 rounded-full text-xs font-bold uppercase">Informal Usage</span></td>
+                            <td class="p-4 text-sm text-brand-graphite">Partners using consumer Claude informally. Shadow AI risk present. Governance program not yet in place. <strong>First-mover window open.</strong></td>
+                            <td class="p-4 text-sm font-semibold" style="color:#8B4507;">Austin (Current)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 border-black">
+                    <div class="font-bold text-brand-black mb-2">Intake Speed Gap</div>
+                    <p class="text-sm text-brand-graphite">Firms are 100x more likely to reach and 21x more likely to convert a prospect contacted within 5 minutes. Howry Breen &amp; Herman has 24/7 intake coverage but no structured pipeline or automated follow-up behind it.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4" style="border-top-color:#C9640B;">
+                    <div class="font-bold text-brand-black mb-2">AI Search Invisibility</div>
+                    <p class="text-sm text-brand-graphite">Google AI Overviews appear in 57% of long-tail legal queries. Fewer than 5% of Austin PI firms have any formal AEO strategy. The firm that structures its content first earns default citation status in AI-generated answers.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4" style="border-top-color:#D4891F;">
+                    <div class="font-bold text-brand-black mb-2">Referral Network Risk</div>
+                    <p class="text-sm text-brand-graphite">Referring attorneys increasingly evaluate technology infrastructure as a quality signal. AI-capable PI firms demonstrating faster resolution timelines will capture referral network share within 3&ndash;5 years.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: AI TOOL LANDSCAPE -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-market.webp" alt="Tool Landscape">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>AI Tool Landscape</h3>
+                <p>Full Stack Evaluation: What Each Tool Does and What It Costs</p>
+            </div>
+        </div>
+
+        <section id="tools">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">4. AI Tool Landscape</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Nine tools evaluated across six problem areas. The "Replaceable?" column flags whether Archificials can build a proprietary equivalent Howry Breen &amp; Herman owns outright, eliminating the recurring license. Clio, CoCounsel/Westlaw, and Semrush depend on proprietary data networks and cannot be replicated. Every other tool addresses a workflow problem that custom code can solve.</p>
+
+            <div class="overflow-x-auto bg-white rounded-xl card-shadow">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-black text-white">
+                            <th class="p-3 font-semibold text-sm">Problem Area</th>
+                            <th class="p-3 font-semibold text-sm">Tool</th>
+                            <th class="p-3 font-semibold text-sm">What It Does</th>
+                            <th class="p-3 font-semibold text-sm">Annual License</th>
+                            <th class="p-3 font-semibold text-sm">Replaceable?</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-brand-platinum text-sm">
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Governed AI workspace</td>
+                            <td class="p-3 font-bold text-brand-black">Claude Enterprise</td>
+                            <td class="p-3 text-brand-graphite">Ring-fenced, zero-retention AI workspace for compliant use of Claude across all partner and paralegal workflows. No training on client data.</td>
+                            <td class="p-3 text-brand-graphite">~$3,600/yr</td>
+                            <td class="p-3"><span class="tool-replace-no">N/A (entry point)</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Intake CRM</td>
+                            <td class="p-3 font-bold text-brand-black">Lawmatics Pro</td>
+                            <td class="p-3 text-brand-graphite">Manages the prospect pipeline from first contact to signed retainer. Triggers automated follow-up sequences so no lead goes cold.</td>
+                            <td class="p-3 text-brand-graphite">$3,588/yr</td>
+                            <td class="p-3"><span class="tool-replace-yes">Yes &mdash; $8K build</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Practice management</td>
+                            <td class="p-3 font-bold text-brand-black">Clio Elite (10 users)</td>
+                            <td class="p-3 text-brand-graphite">Runs matters, deadlines, billing, and client communications for the whole firm. AI features built in.</td>
+                            <td class="p-3 text-brand-graphite">$19,080/yr</td>
+                            <td class="p-3"><span class="tool-replace-no">No &mdash; billing + integrations</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Demand letters</td>
+                            <td class="p-3 font-bold text-brand-black">EvenUp</td>
+                            <td class="p-3 text-brand-graphite">Drafts PI demand letters, medical summaries, and negotiation sheets using AI trained on settlement data.</td>
+                            <td class="p-3 text-brand-graphite">~$10&ndash;15K est.</td>
+                            <td class="p-3"><span class="tool-replace-yes">Yes &mdash; $20K build</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Medical record review</td>
+                            <td class="p-3 font-bold text-brand-black">Supio</td>
+                            <td class="p-3 text-brand-graphite">Reads thousands of pages of medical records and produces organized chronologies, case Q&amp;A, and source-linked document search.</td>
+                            <td class="p-3 text-brand-graphite">~$15K est.</td>
+                            <td class="p-3"><span class="tool-replace-yes">Yes &mdash; custom module</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Legal research</td>
+                            <td class="p-3 font-bold text-brand-black">CoCounsel Legal (Westlaw)</td>
+                            <td class="p-3 text-brand-graphite">Multi-step research across Westlaw's database. Surfaces comparable verdicts, economic loss analysis, and case summaries.</td>
+                            <td class="p-3 text-brand-graphite">$21,600 (4 users)</td>
+                            <td class="p-3"><span class="tool-replace-no">No &mdash; proprietary legal DB</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">E-discovery</td>
+                            <td class="p-3 font-bold text-brand-black">Everlaw</td>
+                            <td class="p-3 text-brand-graphite">Manages large document sets in complex PI and mass tort matters at per-GB pricing. No fixed enterprise contract required.</td>
+                            <td class="p-3 text-brand-graphite">$15&ndash;30K est.</td>
+                            <td class="p-3"><span class="tool-replace-partial">Partial &mdash; $25K module</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">SEO / AEO data</td>
+                            <td class="p-3 font-bold text-brand-black">Semrush Business</td>
+                            <td class="p-3 text-brand-graphite">Tracks keyword rankings, monitors competitor content, surfaces PI search opportunities and content gaps.</td>
+                            <td class="p-3 text-brand-graphite">$5,400/yr</td>
+                            <td class="p-3"><span class="tool-replace-no">No &mdash; proprietary SEO data</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 text-brand-grey font-medium">Content optimization</td>
+                            <td class="p-3 font-bold text-brand-black">SurferSEO</td>
+                            <td class="p-3 text-brand-graphite">Scores your content against top-ranking pages for any keyword and prescribes specific improvements for AI search visibility.</td>
+                            <td class="p-3 text-brand-graphite">~$3,240/yr</td>
+                            <td class="p-3"><span class="tool-replace-no">No &mdash; proprietary ranking data</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 5: SAAS VS PROPRIETARY -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-scenarios.webp" alt="SaaS vs Proprietary">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>SaaS Path vs. Proprietary Path</h3>
+                <p>Two Ways to Build the Same Capability</p>
+            </div>
+        </div>
+
+        <section id="saas-vs-prop">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">5. SaaS Path vs. Proprietary Path</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Every scenario in Phase 02 has two pricing tracks. Understanding the difference matters before choosing a path.</p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-black">
+                    <div class="text-xl font-black text-brand-black mb-3">SaaS Path</div>
+                    <p class="text-sm text-brand-graphite mb-4">Buy licenses from established vendors (Lawmatics, EvenUp, Supio). Archificials configures and integrates them for the firm's specific workflows. Value delivery begins within 30 days on several tools.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center gap-2"><span class="text-brand-orange">+</span><span class="text-brand-graphite">Faster to start. First results visible in Month 1.</span></div>
+                        <div class="flex items-center gap-2"><span class="text-brand-orange">+</span><span class="text-brand-graphite">Vendor handles updates and infrastructure.</span></div>
+                        <div class="flex items-center gap-2"><span class="text-brand-orange">+</span><span class="text-brand-graphite">Lower Year 1 cost for most scenarios.</span></div>
+                        <div class="flex items-center gap-2"><span style="color:#808182;">-</span><span class="text-brand-graphite">Annual license fees continue indefinitely. Competitors can buy the same stack.</span></div>
+                        <div class="flex items-center gap-2"><span style="color:#808182;">-</span><span class="text-brand-graphite">Tool capability depends on vendor roadmap decisions.</span></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#C9640B;">
+                    <div class="text-xl font-black text-brand-black mb-3">Proprietary Path</div>
+                    <p class="text-sm text-brand-graphite mb-4">Archificials builds the tools and Howry Breen &amp; Herman owns them outright. No recurring vendor license on the built tools. Firm data never enters a vendor's infrastructure.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center gap-2"><span class="text-brand-orange">+</span><span class="text-brand-graphite">Eliminates recurring license fees on built tools starting Year 2.</span></div>
+                        <div class="flex items-center gap-2"><span class="text-brand-orange">+</span><span class="text-brand-graphite">Built on the firm's own case history and workflows. Not a generic product.</span></div>
+                        <div class="flex items-center gap-2"><span class="text-brand-orange">+</span><span class="text-brand-graphite">Structural competitive advantage that cannot be replicated by buying a subscription.</span></div>
+                        <div class="flex items-center gap-2"><span style="color:#808182;">-</span><span class="text-brand-graphite">Higher Year 1 cost. First results take longer (building, not configuring).</span></div>
+                        <div class="flex items-center gap-2"><span style="color:#808182;">-</span><span class="text-brand-graphite">Ongoing Archificials involvement required for maintenance and updates.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="text-lg font-bold text-brand-black mb-3">3-Year Cost Comparison: Phase 02 Scenario C</div>
+                        <p class="text-sm text-brand-graphite mb-4">Year 1 is similar on both paths. Starting in Year 2, the proprietary path saves approximately $13,588 per year on three eliminated licenses (Lawmatics and EvenUp). By Year 3, cumulative savings exceed $41,000.</p>
+                        <div class="p-4 rounded-lg bg-brand-platinum text-sm text-brand-graphite">
+                            <strong>Three tools stay SaaS no matter what:</strong> Clio Elite ($19,080/yr, runs billing and integration network), CoCounsel/Westlaw ($21,600/yr, proprietary case law database), and Semrush ($5,400/yr, proprietary keyword data). These cannot be replicated by custom builds.
+                        </div>
+                    </div>
+                    <div class="chart-container-sm">
+                        <canvas id="saasPropChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: COMPLIANCE & GOVERNANCE -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/theme-security.webp" alt="Compliance">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Compliance &amp; Governance</h3>
+                <p>ABA 512 &middot; Texas Bar 705 &middot; TRAIGA &middot; Federal Court Disclosure</p>
+            </div>
+        </div>
+
+        <section id="compliance">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">6. Compliance &amp; Governance</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Howry Breen &amp; Herman is already classified as an AI "deployer" under TRAIGA (Texas Responsible AI Governance Act), in effect since January 1, 2026. Every AI tool the firm uses, including the informal consumer Claude accounts partners currently have, falls within scope. The governance program described here is not a checkbox activity. It is a complete compliance infrastructure that produces a record defensible in a State Bar inquiry or malpractice proceeding.</p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-black text-white p-6 rounded-xl card-shadow">
+                    <div class="text-brand-orange font-bold text-lg mb-4">Regulatory Landscape</div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-brand-orange pl-4">
+                            <div class="font-bold text-brand-orangeLight">ABA Formal Opinion 512 (July 2024)</div>
+                            <p class="text-sm text-brand-grey mt-1">Six ethics obligations: competence, confidentiality, communication, candor to tribunal, supervision, and billing. Written firm AI policy required. Immediate professional standard.</p>
+                        </div>
+                        <div class="border-l-4 border-brand-orangeMed pl-4">
+                            <div class="font-bold text-brand-orangeLight">Texas Bar Opinion 705 (Feb 2025)</div>
+                            <p class="text-sm text-brand-grey mt-1">Independent verification of AI outputs before filing or advising. AI efficiency gains must benefit hourly clients. Human oversight mandatory at all stages.</p>
+                        </div>
+                        <div class="border-l-4 border-brand-orangeLight pl-4">
+                            <div class="font-bold text-brand-orangeLight">TRAIGA HB 149 (In effect Jan 1, 2026)</div>
+                            <p class="text-sm text-brand-grey mt-1">Law firms using AI for intake, research, drafting, or marketing are "deployers." Enforcement by Texas AG. Notice-to-cure process; civil penalties for uncured violations.</p>
+                        </div>
+                        <div class="border-l-4 border-brand-grey pl-4">
+                            <div class="font-bold" style="color:#EBEBEB;">Federal Court AI Disclosure</div>
+                            <p class="text-sm text-brand-grey mt-1">Northern District of Texas: attorney certification required that AI-drafted language has been independently verified. Standing orders accelerating across all federal courts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="font-bold text-lg text-brand-black mb-4">What the Full Governance Program Covers</div>
+                    <p class="text-sm text-brand-graphite mb-4">Eight deliverables that together constitute a defensible compliance record. Built in Phase 03 (Presence):</p>
+                    <div class="space-y-2">
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">1.</span><span class="text-brand-graphite">Written AI Use Policy addressing all 6 ABA Opinion 512 ethics obligations</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">2.</span><span class="text-brand-graphite">Texas Bar Opinion 705 human oversight protocols and hallucination risk documentation</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">3.</span><span class="text-brand-graphite">TRAIGA deployer obligations package for every AI tool in the firm's stack</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">4.</span><span class="text-brand-graphite">Federal and state court AI disclosure matrix for every court where the firm practices</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">5.</span><span class="text-brand-graphite">Vendor/tool assessment framework applied to every tool in the stack at go-live</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">6.</span><span class="text-brand-graphite">Client disclosure templates for matters where AI materially affects representation</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">7.</span><span class="text-brand-graphite">Billing policy for AI-assisted work under Texas Bar Opinion 705</span></div>
+                        <div class="flex items-start gap-2 text-sm"><span class="text-brand-orange font-bold mt-0.5">8.</span><span class="text-brand-graphite">Attorney and paralegal training sessions on the full compliance framework</span></div>
+                    </div>
+                    <div class="mt-4 p-3 rounded-lg bg-brand-platinum text-xs text-brand-graphite">
+                        Phase 01 (Protect) builds the initial governance layer. Phase 03 (Presence) completes the full program. Sequential and non-duplicative.
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 border-black text-center">
+                    <div class="text-3xl font-black text-brand-black">$5.08M</div>
+                    <div class="text-sm text-brand-grey mt-1">Average law firm data breach cost (2024). More than 10% above the cross-industry average.</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 text-center" style="border-top-color:#C9640B;">
+                    <div class="text-3xl font-black" style="color:#C9640B;">40%</div>
+                    <div class="text-sm text-brand-grey mt-1">Of law firms have already experienced a security breach. PI client medical records are a high-value target.</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 text-center" style="border-top-color:#8B4507;">
+                    <div class="text-3xl font-black" style="color:#8B4507;">9%</div>
+                    <div class="text-sm text-brand-grey mt-1">Of firms have a written, enforced AI policy. The compliance gap is Howry Breen &amp; Herman's differentiator to claim.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: AEO + GEO -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/theme-competitive-edge.webp" alt="AEO and GEO">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>AEO + GEO Strategy</h3>
+                <p>Answer Engine &amp; Generative Engine Optimization for AI-Native Search</p>
+            </div>
+        </div>
+
+        <section id="aeo">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">7. AEO + GEO Strategy</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">AI platforms now generate 45 billion sessions per month. ChatGPT holds 64&ndash;68% of the AI chatbot market. Google AI Overviews appear in 57% of long-tail legal queries. AI-driven traffic grew 257% year-over-year. The search landscape has structurally changed: the firm that earns AI citations earns the prospect before they see a single blue link. Fewer than 5% of Austin PI firms have any formal AEO strategy. The compounding window is open now.</p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="font-bold text-lg text-brand-black mb-4">Answer Engine Optimization (AEO)</div>
+                    <p class="text-sm text-brand-graphite mb-4">AEO structures the firm's content so AI crawlers extract and cite it directly in generated answers. Four structural changes required:</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-black text-white text-xs font-bold flex items-center justify-center shrink-0">01</div>
+                            <div class="text-sm text-brand-graphite"><strong class="text-brand-black">Attorney Schema Markup</strong> on every profile: name, bar number, practice areas, location, awards, and case results in JSON-LD format.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-black text-white text-xs font-bold flex items-center justify-center shrink-0">02</div>
+                            <div class="text-sm text-brand-graphite"><strong class="text-brand-black">FAQ Architecture:</strong> 50 pages answering Texas PI questions with direct, AI-extractable answers in the first 50 words.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-black text-white text-xs font-bold flex items-center justify-center shrink-0">03</div>
+                            <div class="text-sm text-brand-graphite"><strong class="text-brand-black">Expanded Results Page:</strong> Per-case detail (injury type, jurisdiction, resolution method, timeline) that AI systems cite as specific, verifiable authority.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-full bg-black text-white text-xs font-bold flex items-center justify-center shrink-0">04</div>
+                            <div class="text-sm text-brand-graphite"><strong class="text-brand-black">Directory Normalization:</strong> 40+ legal directories (Avvo, Justia, FindLaw, Google Business) with consistent NAP data that AI cross-references before citing any firm.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="font-bold text-lg text-brand-black mb-4">Generative Engine Optimization (GEO)</div>
+                    <p class="text-sm text-brand-graphite mb-4">GEO ensures AI platforms cite the firm by name when a user asks for an Austin PI attorney recommendation. Three priorities:</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="p-3 rounded-lg border-l-4 border-brand-orange" style="background:rgba(201,100,11,0.06);">
+                            <div class="font-semibold text-sm text-brand-black">Wikipedia Presence</div>
+                            <div class="text-xs text-brand-graphite mt-1">Maintain or create a Wikipedia entry for the firm with sourced data on major verdicts. AI systems weight Wikipedia as a primary authority citation source.</div>
+                        </div>
+                        <div class="p-3 rounded-lg border-l-4 border-brand-orangeMed" style="background:rgba(201,100,11,0.06);">
+                            <div class="font-semibold text-sm text-brand-black">Press Citation Building</div>
+                            <div class="text-xs text-brand-graphite mt-1">Every verdict or settlement above $1M pitched to Texas Lawyer, Law360, and local news. AI systems crawl and weight press mentions as authority signals.</div>
+                        </div>
+                        <div class="p-3 rounded-lg border-l-4 border-brand-orangeLight" style="background:rgba(201,100,11,0.06);">
+                            <div class="font-semibold text-sm text-brand-black">Consistent NAP Data</div>
+                            <div class="text-xs text-brand-graphite mt-1">Name, address, phone consistent across all 40+ legal directories. Every AI system querying for Austin PI firms retrieves identical, authoritative information about the firm.</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-brand-platinum pt-4">
+                        <div class="text-xs font-bold text-brand-grey uppercase tracking-wide mb-2">Howry Breen &amp; Herman's Raw Material Advantage</div>
+                        <div class="text-sm text-brand-graphite">The $53.9M verdict, $34.8M settlement, and $50M settlement are exactly the kind of specific, verifiable, high-authority data points AI systems cite. Properly structured, these make the firm one of the strongest AEO candidates in the Austin market.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-black text-white p-6 rounded-xl card-shadow">
+                <div class="text-brand-orange font-bold text-lg mb-4">AEO/GEO Compounding Returns (Phase 03 Presence)</div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,0.06);">
+                        <div class="text-3xl font-black text-brand-orange mb-1">Month 12</div>
+                        <div class="text-sm text-brand-grey">5&ndash;10 AI citations established. 3&ndash;5 monthly organic PI leads from AI search. Revenue impact: $300K&ndash;$750K.</div>
+                    </div>
+                    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,0.06);">
+                        <div class="text-3xl font-black text-brand-orange mb-1">Month 24</div>
+                        <div class="text-sm text-brand-grey">20&ndash;35 AI citations. 8&ndash;15 monthly organic leads. Cumulative revenue impact: $900K&ndash;$2.25M.</div>
+                    </div>
+                    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,0.06);">
+                        <div class="text-3xl font-black text-brand-orange mb-1">Month 36</div>
+                        <div class="text-sm text-brand-grey">40&ndash;60+ AI citations. 15&ndash;25+ monthly leads at near-zero acquisition cost. Cumulative: $1.8M&ndash;$4.5M.</div>
+                    </div>
+                </div>
+                <div class="mt-4 p-3 rounded-lg" style="background:rgba(201,100,11,0.15); border:1px solid rgba(201,100,11,0.3);">
+                    <div class="text-sm" style="color:#EBEBEB;">Firms implementing AEO today are generating 3.4x more AI search traffic than competitors who have not started. AI systems learn from historical citation patterns: a firm cited consistently for 12 months becomes the default source for that jurisdiction and practice area. Latecomers cannot buy their way into that position.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: APPROACH BY PHASES -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-scenarios.webp" alt="Three Phases">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>An Approach by Phases</h3>
+                <p>Protect &middot; Propel &middot; Presence</p>
+            </div>
+        </div>
+
+        <section id="phases">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">8. An Approach by Phases</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Three phases, each with a distinct mandate. Phase 01 eliminates the liability that exists today. Phase 02 builds the operational infrastructure that drives revenue and efficiency. Phase 03 builds the long-term AI search presence that turns the firm's verdict history into a client acquisition asset. Each phase de-risks the next: results from Phase 01 justify Phase 02 investment; Phase 02 fluency makes Phase 03 execution faster and stickier.</p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Phase 01 Protect -->
+                <div class="bg-white rounded-xl card-shadow overflow-hidden">
+                    <div class="bg-black px-6 py-4">
+                        <div class="text-brand-orange text-xs font-bold uppercase tracking-widest mb-1">Phase 01 &nbsp; Weeks 1&ndash;4</div>
+                        <div class="text-white text-2xl font-black">Protect</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-brand-graphite mb-4">Infrastructure-first. Before adding a single new tool, we close the liability exposure that already exists, configure Claude to work the way HB&H works, and build the internal fluency that makes every subsequent phase faster and cheaper.</p>
+                        <ul class="text-sm text-brand-graphite space-y-2 mb-5">
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Claude Enterprise migration: ring-fenced workspace, SOC2-compliant, zero-retention, full audit trail</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Custom system prompt architecture: firm-wide instructions encoding HB&H case conventions, output formats, privilege warnings, and hallucination checkpoints</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Project setup by practice area: PI Active Litigation, Mass Tort, Medical Records Review, Intake, Demand Letters, each with pre-loaded context</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Production prompt library: 15&ndash;20 tested prompts for the firm's highest-volume tasks, ready to use Day 1</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>AI Governance Charter: Acceptable Use Policy, Human-in-the-Loop protocols, permitted tool list</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Staff literacy workshop + partner power-user session: prompt craft for PI workflows, hallucination detection, advanced usage for attorneys already on Claude</li>
+                        </ul>
+                        <div class="pt-4 border-t border-brand-platinum">
+                            <div class="text-sm font-semibold text-brand-black">$18,500 Archificials sprint fee</div>
+                            <div class="text-xs text-brand-grey mt-1">+ ~$3,600/yr Claude Enterprise license (ongoing)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 02 Propel -->
+                <div class="bg-white rounded-xl card-shadow overflow-hidden border-2 border-brand-orange">
+                    <div class="px-6 py-4" style="background:#C9640B;">
+                        <div class="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-75">Phase 02 &nbsp; Months 1&ndash;8</div>
+                        <div class="text-white text-2xl font-black">Propel</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-brand-graphite mb-4">Operations-first. Deploy the tools and custom modules that directly address the firm's two most urgent revenue gaps: intake conversion and medical record review efficiency. Four scenario options at different investment levels, from off-the-shelf stack to fully custom-built infrastructure the firm owns outright.</p>
+                        <ul class="text-sm text-brand-graphite space-y-2 mb-5">
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Lawmatics CRM: structured intake pipeline with automated follow-up sequences, live in Week 2</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Clio Elite configured for the firm's top 3 case types: matter templates, billing workflows, document automation</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>EvenUp demand letter generation for standard PI cases: attorney reviews, not drafts from scratch</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>AI-assisted medical record review and chronology for complex and mass tort cases</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>CoCounsel (Westlaw) for comparable verdict research and case valuation support</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Optional: Archificials builds proprietary equivalents the firm owns, eliminating recurring SaaS licenses from Year 2</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>After-hours intake coverage via AI-assisted triage: qualified leads captured outside business hours without adding headcount</li>
+                            <li class="flex items-start gap-2"><span class="text-brand-orange mt-0.5 shrink-0">&#9656;</span>Attorney referral tracking integrated into Clio: every referral source measured, every follow-up logged</li>
+                        </ul>
+                        <div class="pt-4 border-t border-brand-platinum">
+                            <div class="text-sm font-semibold text-brand-black">$72,668&ndash;$309K Year 1</div>
+                            <div class="text-xs text-brand-grey mt-1">Depending on scenario (A, B, C, or D)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 03 Presence -->
+                <div class="bg-white rounded-xl card-shadow overflow-hidden">
+                    <div class="px-6 py-4" style="background:#8B4507;">
+                        <div class="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-75">Phase 03 &nbsp; Months 9&ndash;12</div>
+                        <div class="text-white text-2xl font-black">Presence</div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-brand-graphite mb-4">Acquisition-first. While AI search displaces traditional blue-link rankings, most Austin PI firms have no presence in AI-generated answers. Phase 03 builds that presence and completes the compliance program that makes HB&H's AI use fully defensible. Three tracks run in parallel.</p>
+                        <ul class="text-sm text-brand-graphite space-y-2 mb-5">
+                            <li class="flex items-start gap-2"><span style="color:#8B4507;" class="mt-0.5 shrink-0">&#9656;</span>AEO content architecture: attorney schema markup, 50 FAQ pages built around HB&H's top case types, legal directory normalization</li>
+                            <li class="flex items-start gap-2"><span style="color:#8B4507;" class="mt-0.5 shrink-0">&#9656;</span>GEO citation building: Wikipedia presence for the firm, press outreach to document major verdicts in authoritative sources AI models cite</li>
+                            <li class="flex items-start gap-2"><span style="color:#8B4507;" class="mt-0.5 shrink-0">&#9656;</span>Semrush + SurferSEO for ongoing keyword research, content gap analysis, and monthly optimization</li>
+                            <li class="flex items-start gap-2"><span style="color:#8B4507;" class="mt-0.5 shrink-0">&#9656;</span>Full compliance documentation program: all 8 ABA Opinion 512, Texas Bar Opinion 705, and TRAIGA deployer deliverables</li>
+                            <li class="flex items-start gap-2"><span style="color:#8B4507;" class="mt-0.5 shrink-0">&#9656;</span>Optional Google LSA ad integration: Archificials connects paid acquisition to the organic AI search presence being built</li>
+                            <li class="flex items-start gap-2"><span style="color:#8B4507;" class="mt-0.5 shrink-0">&#9656;</span>Quarterly performance review: AI citation tracking, intake source attribution, and content roadmap for Year 2</li>
+                        </ul>
+                        <div class="pt-4 border-t border-brand-platinum">
+                            <div class="text-sm font-semibold text-brand-black">$49,000&ndash;$59,000 Year 1</div>
+                            <div class="text-xs text-brand-grey mt-1">Excl. optional Google LSA ad spend</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: DEPLOYMENT SCENARIOS -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-scenarios.webp" alt="Deployment Scenarios">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Deployment Scenarios</h3>
+                <p>What Each Path Looks Like in Practice</p>
+            </div>
+        </div>
+
+        <section id="scenarios">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">9. Deployment Scenarios</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-10">Phase 01 has one path. Phase 02 has four options at different investment levels and timelines. Phase 03 has one path. All prices below show third-party license costs and Archificials fees on separate lines: they have different owners, different renewal structures, and different negotiating leverage.</p>
+
+            <!-- PHASE 01 -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-1 w-8 bg-black rounded"></div>
+                    <h4 class="text-xl font-black text-brand-black uppercase tracking-wide">Phase 01 &mdash; Protect</h4>
+                    <div class="h-1 flex-1 bg-brand-platinum rounded"></div>
+                </div>
+
+                <div class="bg-white rounded-xl card-shadow overflow-hidden">
+                    <div class="bg-brand-black px-6 py-4 flex justify-between items-center">
+                        <div>
+                            <div class="text-brand-orange text-xs font-bold uppercase tracking-widest mb-1">Entry Point</div>
+                            <div class="text-white text-xl font-bold">AI Infrastructure &amp; Governance Sprint</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-brand-orange text-2xl font-black">$18,500</div>
+                            <div class="text-brand-grey text-xs">Archificials sprint fee &nbsp;|&nbsp; 2&ndash;4 weeks</div>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-platinum">
+                        <div class="p-6">
+                            <div class="text-brand-orange font-bold mb-2">01 &nbsp; Enterprise Migration</div>
+                            <p class="text-sm text-brand-graphite">Move from individual consumer Claude accounts to Claude Enterprise: a ring-fenced, zero-retention workspace. Client data never trains Anthropic's models. SOC2-compliant, with admin controls, SSO integration, and a full usage audit trail per user.</p>
+                            <div class="mt-3 text-xs text-brand-grey">Claude Enterprise license: ~$3,000&ndash;$3,600/yr for 10 users. Compared to $2,400/yr you may already spend on consumer accounts, the compliance delta is approximately $600/yr.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-brand-orange font-bold mb-2">02 &nbsp; Firm-Specific Configuration</div>
+                            <p class="text-sm text-brand-graphite">Archificials writes the system-level instructions that govern how Claude behaves across every conversation at HB&H. Case type conventions, output format standards for PI memos and demand letters, privilege and confidentiality reminders, citation rules, and hallucination verification checkpoints baked in by default.</p>
+                            <div class="mt-3 text-xs text-brand-grey">Claude Enterprise Projects are then configured per practice area: PI Active Litigation, Mass Tort, Medical Records Review, Intake, Demand Letters. Each loads the right context automatically.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-brand-orange font-bold mb-2">03 &nbsp; Production Prompt Library</div>
+                            <p class="text-sm text-brand-graphite">A library of 15&ndash;20 tested, firm-specific prompts for the highest-volume tasks: medical record chronologies, demand letter drafts, deposition prep questions, case strength memos, settlement valuation frameworks, and intake summaries. Not a workshop handout. Working tools, ready Day 1.</p>
+                            <div class="mt-3 text-xs text-brand-grey">Built around HB&H's actual case types and output preferences, not generic legal templates.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-brand-orange font-bold mb-2">04 &nbsp; Governance Charter</div>
+                            <p class="text-sm text-brand-graphite">An AI Governance Charter covering Acceptable Use Policy, data handling rules, a permitted tool list, and Human-in-the-Loop protocols for client matter work. This is the foundation Phase 03's full compliance program builds on, addressing ABA Opinion 512, Texas Bar Opinion 705, and TRAIGA deployer obligations from Day 1.</p>
+                            <div class="mt-3 text-xs text-brand-grey">Covers the firm's status as an AI "deployer" under TRAIGA, effective January 1, 2026.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-brand-orange font-bold mb-2">05 &nbsp; Staff Literacy Workshop</div>
+                            <p class="text-sm text-brand-graphite">A 2-day workshop for partners and paralegals: prompt craft for PI-specific tasks, hallucination detection and verification habits, supervised use protocols, and how to use the new Project setup. Attorneys arrive at Phase 02 with fluency already built, which compresses the adoption curve on every tool that follows.</p>
+                            <div class="mt-3 text-xs text-brand-grey">EvenUp and Clio enter as additive tools in Phase 02, not as the firm's first exposure to AI-assisted work.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-brand-orange font-bold mb-2">06 &nbsp; Partner Power-User Session</div>
+                            <p class="text-sm text-brand-graphite">A dedicated advanced session for attorneys already using Claude. How to use Projects for complex multi-step litigation tasks, prompt chaining for medical record analysis, building reusable workflows from the prompt library, and getting consistent outputs without starting from scratch each session.</p>
+                            <div class="mt-3 text-xs text-brand-grey">One partner is already on consumer Claude. This session converts ad-hoc usage into a repeatable, defensible practice.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 02 -->
+            <div class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-1 w-8 bg-brand-orange rounded"></div>
+                    <h4 class="text-xl font-black text-brand-black uppercase tracking-wide">Phase 02 &mdash; Propel</h4>
+                    <div class="h-1 flex-1 bg-brand-platinum rounded"></div>
+                </div>
+                <p class="text-sm text-brand-graphite mb-6">Four options. The firm picks one based on how deep to go in Year 1. Scenarios A and B address the intake and operations gap. Scenario C adds custom workflow modules for complex PI cases. Scenario D is the full organizational transformation. No path is pre-selected here: the right answer depends on the firm's investment appetite, timeline tolerance, and appetite for data sovereignty.</p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- Scenario A -->
+                    <div class="scenario-card rounded-xl p-6 card-shadow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-1">Scenario A</div>
+                                <div class="text-xl font-black text-brand-black">Off-the-Shelf Stack</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-brand-orange font-black text-xl">$72,668</div>
+                                <div class="text-xs text-brand-grey">Year 1</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-graphite mb-3"><strong class="text-brand-black">What this means for the firm:</strong> Three proven tools (Lawmatics, Clio Elite, EvenUp) go live within 14 weeks. Intake leads that currently go cold get a structured follow-up pipeline. Demand letters and medical summaries that currently take hours of attorney time get drafted by AI for attorney review. This is the fastest path to visible results with the least custom development.</p>
+                        <div class="space-y-2 text-sm mb-4 border-t border-brand-platinum pt-4">
+                            <div class="flex justify-between"><span class="text-brand-grey">Lawmatics Pro (intake CRM)</span><span class="font-semibold">$3,588/yr</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">Clio Elite, 10 users (practice management)</span><span class="font-semibold">$19,080/yr</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">EvenUp (demand letter AI)</span><span class="font-semibold">~$15,000/yr</span></div>
+                            <div class="flex justify-between border-t border-brand-platinum pt-2"><span class="text-brand-grey">Archificials: Discovery + implementation</span><span class="font-semibold">$35,000</span></div>
+                        </div>
+                        <div class="p-3 bg-brand-platinum rounded-lg text-xs text-brand-graphite">
+                            <strong>Proprietary path alternative:</strong> Archificials builds Lawmatics and EvenUp equivalents for a one-time $28,000. No annual licenses on those two tools from Year 2 onward. Saves ~$17,388/yr starting Year 2.
+                        </div>
+                    </div>
+
+                    <!-- Scenario B -->
+                    <div class="scenario-card rounded-xl p-6 card-shadow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-1">Scenario B</div>
+                                <div class="text-xl font-black text-brand-black">Custom AI Platform</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-brand-orange font-black text-xl">$96,480</div>
+                                <div class="text-xs text-brand-grey">Year 1</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-graphite mb-3"><strong class="text-brand-black">What this means for the firm:</strong> Instead of buying vendor software, Archificials builds a bespoke AI platform for Howry Breen &amp; Herman's workflows. The firm owns it outright. Client data never enters a vendor's infrastructure. The intake module, demand letter AI, and medical record review module are trained on the firm's own case history. The trade-off: 24 weeks to first result vs. 4 weeks on Scenario A.</p>
+                        <div class="space-y-2 text-sm mb-4 border-t border-brand-platinum pt-4">
+                            <div class="flex justify-between"><span class="text-brand-grey">Clio Elite, 10 users (SaaS, stays)</span><span class="font-semibold">$19,080/yr</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">Infra (Cloudflare + Claude API)</span><span class="font-semibold">~$2,400/yr</span></div>
+                            <div class="flex justify-between border-t border-brand-platinum pt-2"><span class="text-brand-grey">Archificials: custom platform build</span><span class="font-semibold">$75,000</span></div>
+                        </div>
+                        <div class="p-3 bg-brand-platinum rounded-lg text-xs text-brand-graphite">
+                            <strong>3-year comparison vs. Scenario C SaaS path:</strong> Scenario B saves approximately $119K over 3 years. Year 2+ annual cost: $57,480, compared to $77K+ for Scenario C recurring licenses.
+                        </div>
+                    </div>
+
+                    <!-- Scenario C -->
+                    <div class="scenario-card rounded-xl p-6 card-shadow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-1">Scenario C</div>
+                                <div class="text-xl font-black text-brand-black">Hybrid Approach</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-brand-orange font-black text-xl">$182,796</div>
+                                <div class="text-xs text-brand-grey">Year 1 (excl. Phase 01)</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-graphite mb-3"><strong class="text-brand-black">What this means for the firm:</strong> Phase 02 deploys proven tools in Month 1 for immediate results. Phase 02 then builds custom modules for the workflows where commodity tools fall short: complex mass tort and catastrophic injury record review. The firm gets speed from the SaaS tools and competitive differentiation from the custom modules. This is the most complete Phase 02 option.</p>
+                        <div class="space-y-2 text-sm mb-4 border-t border-brand-platinum pt-4">
+                            <div class="flex justify-between"><span class="text-brand-grey">Months 1&ndash;3: Lawmatics + Clio + EvenUp</span><span class="font-semibold">$32,668/yr</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">Months 4&ndash;8: Supio + CoCounsel (4 users)</span><span class="font-semibold">$36,600/yr</span></div>
+                            <div class="flex justify-between border-t border-brand-platinum pt-2"><span class="text-brand-grey">Archificials: Discovery + Phases 1 + 2 fees</span><span class="font-semibold">$77,500</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">Custom record review module (built, owned)</span><span class="font-semibold">$36,028</span></div>
+                        </div>
+                        <div class="p-3 bg-brand-platinum rounded-lg text-xs text-brand-graphite">
+                            <strong>Proprietary option within Scenario C:</strong> Lawmatics ($3,588/yr) and EvenUp (~$10,000/yr) can additionally be replaced with Archificials builds ($28,000 one-time). Saves ~$13,588/yr from Year 2.
+                        </div>
+                    </div>
+
+                    <!-- Scenario D -->
+                    <div class="scenario-card rounded-xl p-6 card-shadow">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-1">Scenario D</div>
+                                <div class="text-xl font-black text-brand-black">AI-First Transformation</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-brand-orange font-black text-xl">$265&ndash;309K</div>
+                                <div class="text-xs text-brand-grey">Year 1</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-brand-graphite mb-3"><strong class="text-brand-black">What this means for the firm:</strong> Full organizational reimagination across five major processes. Builds on Scenario C's complete stack and extends it: CoCounsel for all 10 attorneys (not just 4), Everlaw for complex e-discovery document management, a partner intelligence dashboard for case valuation and settlement benchmarking, and an advanced governance program. This is Scenario C plus the tools that make a 10-attorney firm run like a 20-attorney firm.</p>
+                        <div class="space-y-2 text-sm mb-4 border-t border-brand-platinum pt-4">
+                            <div class="flex justify-between"><span class="text-brand-grey">Scenario C foundation</span><span class="font-semibold">$182,796</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">CoCounsel expanded to 10 users</span><span class="font-semibold">$43,200&ndash;72,000</span></div>
+                            <div class="flex justify-between"><span class="text-brand-grey">Everlaw (e-discovery)</span><span class="font-semibold">$15,000&ndash;30,000</span></div>
+                            <div class="flex justify-between border-t border-brand-platinum pt-2"><span class="text-brand-grey">Dashboard + advanced governance</span><span class="font-semibold">$40,000</span></div>
+                        </div>
+                        <div class="p-3 bg-brand-platinum rounded-lg text-xs text-brand-graphite">
+                            <strong>Ideal sequencing:</strong> Scenario C first; Scenario D after 6 months when the firm has operational experience with the base stack. Payback: 12&ndash;18 months.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 03 -->
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-1 w-8 rounded" style="background:#8B4507;"></div>
+                    <h4 class="text-xl font-black text-brand-black uppercase tracking-wide">Phase 03 &mdash; Presence</h4>
+                    <div class="h-1 flex-1 bg-brand-platinum rounded"></div>
+                </div>
+
+                <div class="bg-white rounded-xl card-shadow overflow-hidden">
+                    <div class="px-6 py-4 flex justify-between items-center" style="background:#8B4507;">
+                        <div>
+                            <div class="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-75">AEO + GEO Infrastructure</div>
+                            <div class="text-white text-xl font-bold">Build the Long-Term Acquisition Presence</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-white text-2xl font-black">$49,000&ndash;$59,000</div>
+                            <div class="text-xs opacity-75" style="color:#EBEBEB;">Year 1, excl. Google LSA ad spend</div>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-brand-platinum">
+                        <div class="p-6">
+                            <div class="font-bold mb-2" style="color:#8B4507;">Track 1: Authority Assets</div>
+                            <p class="text-sm text-brand-graphite mb-3">Attorney schema markup on every profile page. 40+ directory profiles (Avvo, Justia, FindLaw, Google Business) normalized with consistent NAP data. Wikipedia entry maintained or created with sourced verdict data.</p>
+                            <div class="text-xs text-brand-grey">Archificials fee: $8,000. Semrush + SurferSEO: $8,028/yr.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="font-bold mb-2" style="color:#8B4507;">Track 2: AEO Content</div>
+                            <p class="text-sm text-brand-graphite mb-3">50 FAQ pages answering Texas PI questions with direct, AI-extractable answers in the first 50 words. Structured Results page with per-case detail. These are the pages AI systems cite when generating answers about Austin PI attorneys.</p>
+                            <div class="text-xs text-brand-grey">Content production: $15,000&ndash;$25,000. Archificials content architecture: included in $8,000 fee.</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="font-bold mb-2" style="color:#8B4507;">Track 3: Full Governance</div>
+                            <p class="text-sm text-brand-graphite mb-3">The complete ABA 512 / Texas Bar 705 / TRAIGA compliance stack. Eight deliverables. Court-specific AI disclosure matrix. Vendor assessment framework. Client disclosure templates. Ongoing governance monitoring covered under Year 2+ retainer.</p>
+                            <div class="text-xs text-brand-grey">Archificials governance program: $20,000.</div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-brand-platinum">
+                        <div class="grid md:grid-cols-4 gap-4 text-sm">
+                            <div><span class="text-brand-grey">Semrush + SurferSEO:</span> <strong class="text-brand-black">$8,028/yr</strong></div>
+                            <div><span class="text-brand-grey">Content (50 FAQ pages):</span> <strong class="text-brand-black">$15&ndash;25K</strong></div>
+                            <div><span class="text-brand-grey">Archificials (AEO + governance):</span> <strong class="text-brand-black">$28,000</strong></div>
+                            <div><span class="text-brand-grey">Google LSA ad spend (optional):</span> <strong class="text-brand-black">$36&ndash;60K/yr</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: ADVISORY RETAINER -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/theme-competitive-edge.webp" alt="Advisory Retainer">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Advisory Retainer</h3>
+                <p>Ongoing Engagement &middot; Four Service Areas &middot; Three Tiers</p>
+            </div>
+        </div>
+
+        <section id="retainer">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">10. Advisory Retainer</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">The three phases deliver infrastructure. What sustains it is an ongoing working relationship. AI tools evolve, regulations shift, staff turns over, and new case types create new workflow demands. The Advisory Retainer keeps Archificials engaged as the firm's dedicated AI advisor after implementation: monitoring performance, handling configuration changes, onboarding new staff, and staying ahead of compliance requirements so the firm does not have to.</p>
+
+            <!-- Service Areas -->
+            <div class="grid md:grid-cols-2 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-black">
+                    <div class="font-bold text-brand-black text-base mb-3">01 &nbsp; Compliance Monitoring</div>
+                    <p class="text-sm text-brand-graphite">The regulatory landscape governing AI in legal practice is still forming. ABA guidance, Texas Bar opinions, and TRAIGA implementation rules will evolve. Archificials tracks those developments, updates the firm's Governance Charter accordingly, and flags any required changes to tool configuration or workflow protocols before they become a disciplinary exposure.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-black">
+                    <div class="font-bold text-brand-black text-base mb-3">02 &nbsp; Staff Onboarding &amp; Training</div>
+                    <p class="text-sm text-brand-graphite">Associate turnover at PI firms is real. Every new attorney or paralegal who joins without structured AI onboarding reverts to ad-hoc consumer tool usage, recreating the exact Shadow AI exposure Phase 01 closed. Retainer hours cover onboarding sessions for new hires, refresher training as tools are updated, and dedicated coaching for staff who need more support.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#C9640B;">
+                    <div class="font-bold text-brand-black text-base mb-3">03 &nbsp; Custom Case Configuration</div>
+                    <p class="text-sm text-brand-graphite">Complex litigation does not fit a template. A new MDL, a mass tort with unique documentation requirements, or a high-value wrongful death case may require custom Claude configurations, new prompt workflows, or adjusted Human-in-the-Loop protocols. Archificials builds those configurations on demand, specific to the matter and the attorneys handling it.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4" style="border-top-color:#C9640B;">
+                    <div class="font-bold text-brand-black text-base mb-3">04 &nbsp; Performance Reviews &amp; Optimization</div>
+                    <p class="text-sm text-brand-graphite">Quarterly reviews covering intake conversion metrics, AI search citation tracking, tool utilization rates, and workflow efficiency benchmarks. Archificials identifies what is working, what is underperforming, and where the next improvement is. Each review produces a prioritized action list for the following quarter, keeping the firm's AI investment compounding rather than plateauing.</p>
+                </div>
+            </div>
+
+            <!-- Retainer Tiers -->
+            <h4 class="text-xl font-bold text-brand-black mb-2">Engagement Tiers</h4>
+            <p class="text-sm text-brand-graphite mb-6">All retainer tiers require a 3-month minimum commitment, then roll monthly. Hours are scoped per month and do not carry over. Any work outside the agreed tier, or without a retainer in place, is billed at $350/hr.</p>
+
+            <div class="grid md:grid-cols-4 gap-4 mb-6">
+                <!-- No Retainer -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 border-brand-platinum">
+                    <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-3">No Retainer</div>
+                    <div class="text-2xl font-black text-brand-black mb-1">$350<span class="text-base font-normal text-brand-grey">/hr</span></div>
+                    <div class="text-xs text-brand-grey mb-4">Standard rate, no commitment</div>
+                    <div class="space-y-2 text-xs text-brand-graphite border-t border-brand-platinum pt-3">
+                        <div>Ad-hoc support only</div>
+                        <div>No reserved capacity</div>
+                        <div>Scheduled on availability</div>
+                        <div>No discounted rate</div>
+                    </div>
+                </div>
+
+                <!-- Tier 1 -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 border-black">
+                    <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-3">Tier 1</div>
+                    <div class="text-2xl font-black text-brand-black mb-1">$3,000<span class="text-base font-normal text-brand-grey">/mo</span></div>
+                    <div class="text-xs text-brand-grey mb-4">Up to 10 hrs &middot; $300/hr effective rate</div>
+                    <div class="space-y-2 text-xs text-brand-graphite border-t border-brand-platinum pt-3">
+                        <div>Compliance monitoring</div>
+                        <div>New hire onboarding (1&ndash;2 staff/mo)</div>
+                        <div>Minor configuration updates</div>
+                        <div>Email &amp; async support</div>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 border-brand-orange">
+                    <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-3">Tier 2</div>
+                    <div class="text-2xl font-black text-brand-black mb-1">$5,000<span class="text-base font-normal text-brand-grey">/mo</span></div>
+                    <div class="text-xs text-brand-grey mb-4">Up to 20 hrs &middot; $250/hr effective rate</div>
+                    <div class="space-y-2 text-xs text-brand-graphite border-t border-brand-platinum pt-3">
+                        <div>All Tier 1 services</div>
+                        <div>Custom case configuration</div>
+                        <div>Quarterly performance review</div>
+                        <div>Priority scheduling</div>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4" style="border-top-color:#8B4507;">
+                    <div class="text-xs uppercase font-bold text-brand-grey tracking-widest mb-3">Tier 3</div>
+                    <div class="text-2xl font-black text-brand-black mb-1">$8,000<span class="text-base font-normal text-brand-grey">/mo</span></div>
+                    <div class="text-xs text-brand-grey mb-4">Up to 40 hrs &middot; $200/hr effective rate</div>
+                    <div class="space-y-2 text-xs text-brand-graphite border-t border-brand-platinum pt-3">
+                        <div>All Tier 2 services</div>
+                        <div>Dedicated advisor availability</div>
+                        <div>Complex MDL &amp; mass tort builds</div>
+                        <div>Monthly strategy session</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-black text-white p-5 rounded-xl text-sm">
+                <span class="text-brand-orange font-bold">Note on overage:</span> Hours consumed beyond the monthly tier are billed at the standard $350/hr rate, invoiced at month-end. Retainer fees are invoiced at the start of each month. The 3-month minimum applies to the initial engagement; after that, either party may exit with 30 days written notice.
+            </div>
+        </section>
+
+        <!-- SECTION 11: INVESTMENT OVERVIEW -->
+        <div class="section-hero rounded-xl overflow-hidden card-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-scenarios.webp" alt="Investment Overview">
+            <div class="hero-overlay">
+                <div class="hero-accent"></div>
+                <h3>Investment Overview</h3>
+                <p>License Costs, Archificials Fees, and 3-Year Economics</p>
+            </div>
+        </div>
+
+        <section id="investment">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">11. Investment Overview</h3>
+            <p class="text-lg text-brand-graphite leading-relaxed mb-8">Every cost falls into one of four categories: third-party software licenses paid directly to vendors, Archificials deliverables (integrations, automations, custom modules, policies), Archificials service fees, and media spend (Google LSAs, billed to Google directly). These categories are always shown separately because they have different owners and different renewal dynamics.</p>
+
+            <div class="overflow-x-auto bg-white rounded-xl card-shadow mb-8">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-black text-white text-sm">
+                            <th class="p-3 font-semibold">Scenario</th>
+                            <th class="p-3 font-semibold">3rd-party licenses/yr</th>
+                            <th class="p-3 font-semibold">Archificials fees (Yr 1)</th>
+                            <th class="p-3 font-semibold">Year 1 Total</th>
+                            <th class="p-3 font-semibold">Year 2+ Recurring</th>
+                            <th class="p-3 font-semibold">Payback</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-brand-platinum text-sm">
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 font-semibold text-brand-black">Phase 01 Protect (standalone)</td>
+                            <td class="p-3">~$3,600 (Enterprise only)</td>
+                            <td class="p-3">$18,500</td>
+                            <td class="p-3 font-semibold">~$22,100</td>
+                            <td class="p-3">~$3,600</td>
+                            <td class="p-3 text-brand-orange font-semibold">Immediate (liability eliminated)</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 font-semibold text-brand-black">Phase 02 &mdash; Scenario A</td>
+                            <td class="p-3">$37,668</td>
+                            <td class="p-3">$35,000</td>
+                            <td class="p-3 font-semibold">$72,668</td>
+                            <td class="p-3">$37,668&ndash;$73,668</td>
+                            <td class="p-3">3&ndash;5 months</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 font-semibold text-brand-black">Phase 02 &mdash; Scenario B</td>
+                            <td class="p-3">$21,480</td>
+                            <td class="p-3">$75,000</td>
+                            <td class="p-3 font-semibold">$96,480</td>
+                            <td class="p-3">$57,480&ndash;$93,480</td>
+                            <td class="p-3">8&ndash;14 months</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 font-semibold text-brand-black">Phase 02 &mdash; Scenario C</td>
+                            <td class="p-3">$69,268 + licenses</td>
+                            <td class="p-3">$113,528</td>
+                            <td class="p-3 font-semibold">$182,796</td>
+                            <td class="p-3">~$116&ndash;153K</td>
+                            <td class="p-3">5&ndash;8 months</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 font-semibold text-brand-black">Phase 02 &mdash; Scenario D</td>
+                            <td class="p-3">$127&ndash;174K</td>
+                            <td class="p-3">$40,000</td>
+                            <td class="p-3 font-semibold">$265&ndash;309K</td>
+                            <td class="p-3">$178&ndash;246K</td>
+                            <td class="p-3">12&ndash;18 months</td>
+                        </tr>
+                        <tr class="hover:bg-brand-orangeTint">
+                            <td class="p-3 font-semibold text-brand-black">Phase 03 Presence</td>
+                            <td class="p-3">$8,028 + $15&ndash;25K content</td>
+                            <td class="p-3">$28,000</td>
+                            <td class="p-3 font-semibold">$49&ndash;59K</td>
+                            <td class="p-3">$28&ndash;38K</td>
+                            <td class="p-3">8&ndash;12 months</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Archificials service fee breakdown -->
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4 border-black">
+                    <div class="text-xs font-bold uppercase tracking-wide text-brand-grey mb-2">Discovery &amp; Strategy</div>
+                    <div class="text-2xl font-black text-brand-black">$12,500</div>
+                    <div class="text-sm text-brand-graphite mt-2">2&ndash;4 weeks. Workflow map, tool selection, prioritized roadmap with ROI metrics. The roadmap belongs to the firm regardless of next steps.</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4" style="border-top-color:#C9640B;">
+                    <div class="text-xs font-bold uppercase tracking-wide text-brand-grey mb-2">Implementation</div>
+                    <div class="text-2xl font-black" style="color:#C9640B;">$25K&ndash;$90K</div>
+                    <div class="text-sm text-brand-graphite mt-2">Per phase. Scope determines where in the range. Covers all integrations, automations, workflow configuration, and custom builds.</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4" style="border-top-color:#D4891F;">
+                    <div class="text-xs font-bold uppercase tracking-wide text-brand-grey mb-2">Training</div>
+                    <div class="text-2xl font-black" style="color:#D4891F;">$5K&ndash;$20K</div>
+                    <div class="text-sm text-brand-graphite mt-2">After implementation. Firm-wide and role-specific sessions. Attorneys and paralegals trained on actual workflows, not generic tool demos.</div>
+                </div>
+                <div class="bg-white p-5 rounded-xl card-shadow border-t-4" style="border-top-color:#E8A84C;">
+                    <div class="text-xs font-bold uppercase tracking-wide text-brand-grey mb-2">Ongoing Retainer</div>
+                    <div class="text-2xl font-black" style="color:#E8A84C;">$2K&ndash;$5K/mo</div>
+                    <div class="text-sm text-brand-graphite mt-2">Starts after initial implementation. Covers optimization, vendor management, governance monitoring, and policy updates as regulations evolve.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: WHY ARCHIFICIALS -->
+        <section id="why">
+            <h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">12. Why Archificials</h3>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="text-2xl font-black text-brand-black mb-2">60%</div>
+                    <div class="font-semibold text-brand-graphite mb-3">of legal AI tools are underutilized within 6 months of purchase without structured implementation.</div>
+                    <p class="text-sm text-brand-graphite">The tools do not fail. The implementation does. Howry Breen &amp; Herman can purchase Clio, Lawmatics, and EvenUp in an afternoon and see zero operational change six months later if those tools are not mapped to actual workflows, integrated with each other, and adopted by attorneys who were not part of the buying decision.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="font-bold text-lg text-brand-black mb-4">Archificials vs. The Alternatives</div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start gap-2"><span class="text-brand-orange font-bold shrink-0">vs. Big 4:</span><span class="text-brand-graphite">12&ndash;18 months, $500K+. Junior staff billing senior rates. Archificials delivers equivalent strategic depth in 8&ndash;16 weeks at a fraction of the cost.</span></div>
+                        <div class="flex items-start gap-2"><span class="text-brand-orange font-bold shrink-0">vs. SaaS vendors:</span><span class="text-brand-graphite">Clio will sell a license and provide onboarding documentation. It will not configure the firm's medical record workflow or train a skeptical senior partner on why the tool is worth using.</span></div>
+                        <div class="flex items-start gap-2"><span class="text-brand-orange font-bold shrink-0">vs. IT firms:</span><span class="text-brand-graphite">IT manages infrastructure. It does not design AI-assisted intake workflows, configure CRM automation for attorney referral tracking, or build the governance policy required by ABA 512 and TRAIGA.</span></div>
+                        <div class="flex items-start gap-2"><span class="text-brand-orange font-bold shrink-0">vs. solo consultants:</span><span class="text-brand-graphite">A talented solo consultant can provide strategy. They cannot sustain a 12-month implementation, deliver firm-wide training at scale, or manage vendor relationships across 5&ndash;7 tools simultaneously.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border-l-4 border-black pl-4">
+                        <div class="font-bold text-brand-black mb-2">Complex PI requires custom configuration</div>
+                        <p class="text-sm text-brand-graphite">Medical record review for a $20M wrongful death case is not the same as intake for an auto accident. AI tools need to be configured to support attorney judgment at decision points, not bypass it. That configuration requires someone who understands both the technology and the legal workflow.</p>
+                    </div>
+                    <div class="border-l-4 pl-4" style="border-left-color:#C9640B;">
+                        <div class="font-bold text-brand-black mb-2">The mid-market gap</div>
+                        <p class="text-sm text-brand-graphite">Enterprise tools (Harvey AI at $288K+ minimum) are priced for AmLaw 100 firms. Commodity tools lack the workflow depth complex PI litigation demands. The gap between these extremes is precisely where targeted, well-implemented AI generates the most disproportionate return.</p>
+                    </div>
+                    <div class="border-l-4 pl-4" style="border-left-color:#8B4507;">
+                        <div class="font-bold text-brand-black mb-2">A 30-year reputation as the foundation</div>
+                        <p class="text-sm text-brand-graphite">The $53.9M verdict, the $34.8M settlement, the $50M settlement: these are not just case results. They are the raw material for the most credible AEO profile in the Austin PI market. The firm that builds on them first earns a citation record that latecomers cannot buy their way into.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CTA -->
+    <div class="section-hero mt-20" style="height: 280px;">
+        <img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/closing-cta.webp" alt="Next Steps" style="width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="hero-overlay" style="justify-content:center; align-items:center; text-align:center;">
+            <div class="hero-accent" style="margin-left:auto;margin-right:auto;"></div>
+            <h3 style="font-size:1.875rem;">Thirty years of landmark verdicts. The infrastructure to protect and build on them.</h3>
+            <p style="letter-spacing:0.1em; margin-top:0.6rem;">Archificials &nbsp;&middot;&nbsp; Austin, TX &nbsp;&middot;&nbsp; archificials.com</p>
+        </div>
+    </div>
+
+    <footer class="bg-black text-brand-grey py-10 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-brand-orange font-bold tracking-widest uppercase text-sm mb-3">Archificials</div>
+            <p class="text-sm">AI Strategy &amp; Implementation &nbsp;&middot;&nbsp; Austin, Texas &nbsp;&middot;&nbsp; archificials.com</p>
+            <p class="text-xs mt-2" style="color:rgba(128,129,130,0.6);">Prepared for Howry Breen &amp; Herman, LLP &nbsp;&middot;&nbsp; Confidential &nbsp;&middot;&nbsp; May 2026 &nbsp;&middot;&nbsp; Based on 30+ verified sources</p>
+        </div>
+    </footer>
+
+    <!-- CHARTS -->
+    <script>
+        const wrapLabel = (label, limit = 16) => {
+            if (label.length <= limit) return label;
+            const words = label.split(' ');
+            let lines = [], curr = '';
+            words.forEach(w => {
+                if ((curr + w).length > limit) { if (curr) lines.push(curr.trim()); curr = w + ' '; }
+                else curr += w + ' ';
+            });
+            if (curr) lines.push(curr.trim());
+            return lines;
+        };
+
+        const tooltipConfig = {
+            callbacks: {
+                title: items => {
+                    let l = items[0].chart.data.labels[items[0].dataIndex];
+                    return Array.isArray(l) ? l.join(' ') : l;
+                }
+            }
+        };
+
+        // Donut: Governance Gap
+        new Chart(document.getElementById('marketChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Using AI (No Formal Policy)', 'Using AI (Formal Policy)', 'Not Using AI'],
+                datasets: [{ data: [60, 9, 31], backgroundColor: ['#C9640B', '#E8A84C', '#808182'], borderWidth: 0, hoverOffset: 4 }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 11 }, color: '#333333', padding: 12 } },
+                    tooltip: tooltipConfig
+                },
+                cutout: '62%'
+            }
+        });
+
+        // Radar: Readiness
+        new Chart(document.getElementById('readinessChart'), {
+            type: 'radar',
+            data: {
+                labels: ['Operational\nEfficiency', 'Client\nAcquisition', 'Digital\nVisibility', 'Practice\nReadiness'].map(l => wrapLabel(l, 14)),
+                datasets: [
+                    {
+                        label: 'Howry Breen & Herman',
+                        data: [42, 38, 55, 68],
+                        backgroundColor: 'rgba(201,100,11,0.13)',
+                        borderColor: '#C9640B',
+                        pointBackgroundColor: '#000000',
+                        pointBorderColor: '#C9640B',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Industry Benchmark',
+                        data: [55, 50, 58, 52],
+                        backgroundColor: 'rgba(0,0,0,0.04)',
+                        borderColor: '#808182',
+                        pointBackgroundColor: '#808182',
+                        pointBorderColor: '#808182',
+                        borderWidth: 2,
+                        borderDash: [4,4]
+                    }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 11 }, color: '#333333' } },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    r: {
+                        min: 0, max: 100,
+                        ticks: { stepSize: 25, font: { family: 'Inter', size: 10 }, color: '#808182', backdropColor: 'transparent' },
+                        grid: { color: 'rgba(0,0,0,0.08)' },
+                        pointLabels: { font: { family: 'Inter', size: 11, weight: '600' }, color: '#333333' },
+                        angleLines: { color: 'rgba(0,0,0,0.08)' }
+                    }
+                }
+            }
+        });
+
+        // SaaS vs Proprietary
+        new Chart(document.getElementById('saasPropChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Year 1', 'Year 2', 'Year 3'],
+                datasets: [
+                    {
+                        label: 'SaaS Path',
+                        data: [182796, 77296, 77296],
+                        backgroundColor: '#C9640B',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Proprietary Path',
+                        data: [197208, 63708, 63708],
+                        backgroundColor: '#000000',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 11 }, color: '#333333' } },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => ' $' + ctx.raw.toLocaleString()
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            font: { family: 'Inter', size: 10 },
+                            color: '#808182',
+                            callback: v => '$' + (v/1000).toFixed(0) + 'K'
+                        },
+                        grid: { color: 'rgba(0,0,0,0.06)' }
+                    },
+                    x: {
+                        ticks: { font: { family: 'Inter', size: 11 }, color: '#333333' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,12 +1,15 @@
 /* Archificials | HB&H AI Strategy Presentation | archificials.com */
 (function () {
   var ROOT_ID = 'hb-strategy';
-  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/biel-pitman/law-firm-assessment-v2@v2.2.0';
+  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/biel-pitman/law-firm-assessment-v2@v2.3.0';
   var HTML_URL = CDN_BASE + '/dist/hb-strategy.html';
 
   function init() {
     var target = document.getElementById(ROOT_ID);
     if (!target) { console.warn('[hb-strategy] No element with id="' + ROOT_ID + '" found.'); return; }
+
+    // Break out of Webflow container to fill full viewport width
+    target.style.cssText = 'position:relative;width:100vw;left:50%;transform:translateX(-50%);display:block;';
 
     var iframe = document.createElement('iframe');
     iframe.title = 'Howry Breen & Herman AI Strategy';

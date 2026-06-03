@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Readiness Research Report: Pirkey Barber PLLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{black:"#000000",orange:"#C9640B",orangeDark:"#8B4507",orangeMed:"#D4891F",orangeLight:"#E8A84C",orangeTint:"rgba(201,100,11,0.08)",grey:"#808182",platinum:"#EBEBEB",graphite:"#333333",white:"#FFFFFF"}},fontFamily:{sans:["Inter","sans-serif"],serif:["Merriweather","serif"]}}}}</script>
+<style>
+body{background-color:#EBEBEB;color:#333}
+.cs{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}
+.sh{position:relative;width:100%;height:280px;overflow:hidden;background:#000}
+.sh img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.sh .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.6));display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 3rem}
+.sh .ov h3{color:#fff;font-size:1.875rem;font-weight:700;margin:0}
+.sh .ov p{color:#EBEBEB;font-size:.875rem;margin-top:.25rem;text-transform:uppercase;letter-spacing:.1em}
+.sh .ov .ac{width:60px;height:4px;background:#C9640B;margin-bottom:.75rem}
+@media(min-width:768px){.sh{height:300px}}
+.rc{position:relative;width:100%;max-width:560px;margin:0 auto;height:320px}
+.rsm{position:relative;width:100%;height:260px}
+.ml{color:inherit;font-weight:700;text-decoration:underline;text-decoration-color:rgba(201,100,11,.5);text-underline-offset:3px}
+.cv{color:#15803d;font-weight:700}.nc{color:#b91c1c;font-weight:700}.pt{color:#92400e;font-weight:700}
+.ti{background:#8B4507;color:#fff}.td{background:#C9640B;color:#fff}
+.tu{background:#EBEBEB;color:#333;border:1px solid #808182}
+.tc{background:#000;color:#C9640B;border:1px solid #C9640B}
+.iu{background:#15803d;color:#fff}
+.ro{background:#000000;color:#C9640B;border:1px solid #C9640B}
+</style>
+</head>
+<body class="font-sans antialiased pb-24">
+<header class="relative overflow-hidden border-b-8 border-brand-orange" style="min-height:480px;background:#000">
+<img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/cover-hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" style="opacity:.78">
+<div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.42) 100%)"></div>
+<div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-16 flex flex-col justify-end" style="min-height:480px">
+  <div class="text-brand-orange font-bold tracking-wider uppercase text-sm mb-3">&#9881; Archificials AI Readiness &amp; Strategic Research , Confidential</div>
+  <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight text-white">AI Readiness Research Report</h1>
+  <h2 class="text-2xl font-light" style="color:#EBEBEB">Pirkey Barber PLLC &nbsp;|&nbsp; Austin, Texas</h2>
+  <p class="text-sm mt-2" style="color:#808182">Trademark &middot; Copyright &middot; Unfair Competition &nbsp;&middot;&nbsp; ~81 employees &nbsp;&middot;&nbsp; June 2026</p>
+  <div class="flex flex-wrap gap-5 mt-8">
+    <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center"><div class="text-3xl font-black text-white">59<span class="text-lg font-normal text-brand-orange">/100</span></div><div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">Overall AI Readiness</div></div>
+    <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center"><div class="text-3xl font-black text-brand-orange">78<span class="text-lg font-normal text-white">/100</span></div><div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">Digital Visibility, Strongest Asset</div></div>
+    <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center"><div class="text-3xl font-black text-white">42<span class="text-lg font-normal text-brand-orange">/100</span></div><div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">Client Acquisition, Primary Gap</div></div>
+    <div class="bg-white/10 border border-white/20 rounded-lg px-5 py-3 text-center"><div class="text-3xl font-black text-brand-orange">5</div><div class="text-xs uppercase tracking-widest text-brand-platinum mt-1">AI Tools Deployed</div></div>
+  </div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-6 md:px-12 mt-12 space-y-20">
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-market.webp" alt=""><div class="ov"><div class="ac"></div><h3>Market Conditions</h3><p>Legal AI Adoption &amp; Industry Benchmarks, 2026</p></div></div>
+<section id="market">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">1. Market Conditions</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-6">The legal AI software market reached <a href="https://www.globenewswire.com/news-release/2026/05/21/3299533" target="_blank" class="ml">$5.59 billion in 2026</a>, growing toward $12.49 billion by 2030 at a 28.3% CAGR. Law firm technology spending grew <a href="https://www.llamalab.ai/blog/legal-tech-spending-surges-2026-ai-adoption" target="_blank" class="ml">9.7% in 2025</a>, the fastest real growth ever recorded in the sector. AI adoption among legal professionals reached <a href="https://www.llamalab.ai/blog/legal-tech-spending-surges-2026-ai-adoption" target="_blank" class="ml">79%</a> in 2025, up from 19% in 2023. Only <a href="https://blog.platinumids.com/blog/ai-adoption-inflection-legal-2026" target="_blank" class="ml">9% of firms</a> have a written, actively enforced AI policy, while 43% have no policy and no plans to create one. Firms with a formal AI strategy are <a href="https://www.thomsonreuters.com/en-us/posts/legal/future-of-professionals-report-analysis-law-firm-economics/" target="_blank" class="ml">3.9 times more likely</a> to experience critical benefits. Meanwhile, <a href="https://www.bestlawfirms.com/articles/law-firm-ai-roi-what-finally-worked-and-why-in-2025/7229" target="_blank" class="ml">59% of legal clients</a> report seeing no measurable savings from outside counsel&apos;s AI usage, confirming that having tools is not the same as having a strategy.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+  <div class="grid grid-cols-2 gap-4">
+    <div class="bg-white p-5 rounded-xl cs border-t-4 border-black"><div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Legal AI Market 2026</div><div class="text-3xl font-black mt-2 text-brand-black">$5.59B</div><div class="text-sm text-brand-grey mt-1">Growing to $12.49B by 2030</div></div>
+    <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#C9640B"><div class="text-xs font-bold text-brand-grey uppercase tracking-wide">CAGR Through 2030</div><div class="text-3xl font-black mt-2" style="color:#C9640B">28.3%</div><div class="text-sm text-brand-grey mt-1">Legal AI software segment</div></div>
+    <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#8B4507"><div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Legal Pro AI Adoption</div><div class="text-3xl font-black mt-2" style="color:#8B4507">79%</div><div class="text-sm text-brand-grey mt-1">Up from 19% in 2023</div></div>
+    <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#D4891F"><div class="text-xs font-bold text-brand-grey uppercase tracking-wide">Strategy Benefit Multiplier</div><div class="text-3xl font-black mt-2" style="color:#D4891F">3.9x</div><div class="text-sm text-brand-grey mt-1">More likely to see critical benefits</div></div>
+  </div>
+  <div class="bg-white p-6 rounded-xl cs">
+    <h4 class="text-lg font-bold text-center mb-1">The Governance Gap</h4>
+    <p class="text-sm text-brand-grey text-center mb-4">79% of legal professionals use AI. Only 9% work inside a firm with a written, enforced policy.</p>
+    <div class="rsm"><canvas id="marketChart"></canvas></div>
+  </div>
+</div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-results.webp" alt=""><div class="ov"><div class="ac"></div><h3>Current Stack &amp; Readiness Assessment</h3><p>Five Tools Deployed, Coverage Analysis &amp; Integration Gaps</p></div></div>
+<section id="stack">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">2. Current Stack &amp; Readiness Assessment</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-8">An overall score of <strong>59/100</strong> reflects genuine early-adopter positioning: five tools deployed, real wins in billing and document management, a ChatGPT Enterprise rollout in progress. The challenge is that those tools operate in silos. None address the firm&apos;s most urgent revenue gap (Client Acquisition, 42/100). The governance layer required to make ChatGPT Enterprise safe and productive has not been built. A critical integration between ChatGPT Enterprise and NetDocuments, made available May 14, 2026, remains unactivated.</p>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 bg-white p-8 rounded-xl cs mb-10">
+  <div class="md:col-span-3">
+    <h4 class="text-lg font-bold text-center mb-1">Readiness Scores vs. Enterprise IP Benchmark</h4>
+    <p class="text-sm text-brand-grey text-center mb-4">Enterprise IP firms scoring above 65 across all four dimensions are beginning to separate from reputation-dependent peers.</p>
+    <div class="rc"><canvas id="readinessChart"></canvas></div>
+  </div>
+  <div class="md:col-span-2 flex flex-col justify-center space-y-3">
+    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#8B4507;background:rgba(139,69,7,.07)"><div class="flex justify-between items-center"><div class="font-bold text-brand-black">Client Acquisition</div><div class="text-2xl font-black" style="color:#8B4507">42<span class="text-sm font-normal text-brand-grey">/100</span></div></div><div class="text-sm text-brand-graphite mt-1">After-hours intake inconsistent. 2&ndash;5 business day cycle. No CRM. None of the five tools address this.</div></div>
+    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#C9640B;background:rgba(201,100,11,.07)"><div class="flex justify-between items-center"><div class="font-bold text-brand-black">Operational Efficiency</div><div class="text-2xl font-black" style="color:#C9640B">58<span class="text-sm font-normal text-brand-grey">/100</span></div></div><div class="text-sm text-brand-graphite mt-1">Billing covered by Billables.AI. Gaps remain in regulatory tracking, citation-verified research, and research consolidation.</div></div>
+    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#E8A84C;background:rgba(232,168,76,.1)"><div class="flex justify-between items-center"><div class="font-bold text-brand-black">Practice Readiness</div><div class="text-2xl font-black" style="color:#E8A84C">54<span class="text-sm font-normal text-brand-grey">/100</span></div></div><div class="text-sm text-brand-graphite mt-1">Teams understand the need. Adoption stalled on clarity: where to start, how to connect tools, what governance requires.</div></div>
+    <div class="p-4 rounded-lg border-l-4" style="border-left-color:#15803d;background:rgba(21,128,61,.07)"><div class="flex justify-between items-center"><div class="font-bold text-brand-black">Digital Visibility</div><div class="text-2xl font-black" style="color:#15803d">78<span class="text-sm font-normal text-brand-grey">/100</span></div></div><div class="text-sm text-brand-graphite mt-1">WTR 1000 rankings, Chambers USA, Best Lawyers. Powerful authority asset not yet structured for AI-search citation.</div></div>
+  </div>
+</div>
+<h4 class="text-xl font-bold text-brand-black mb-4">The Five Deployed Tools: Honest Assessment</h4>
+<div class="space-y-4 mb-10">
+  <div class="bg-white p-6 rounded-xl cs"><div class="flex items-start gap-4"><div class="shrink-0 w-10 h-10 bg-black rounded-lg flex items-center justify-center text-brand-orange font-black text-lg">1</div><div class="flex-1"><div class="flex flex-wrap items-center gap-3 mb-2"><div class="font-bold text-xl text-brand-black">Microsoft Copilot</div><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span><div class="text-sm text-brand-grey ml-auto">~$30/user/month</div></div><p class="text-sm text-brand-graphite mb-3">Productivity AI in Word, Outlook, Teams, and Excel. Saves 15&ndash;30 minutes per document on first drafts, summarizes email threads, generates meeting summaries and action items. Genuine productivity wins for attorneys managing high email volume.</p><div class="p-3 rounded-lg text-sm" style="background:rgba(201,100,11,.04)"><strong class="text-brand-orangeDark">What it cannot do:</strong> Access Westlaw or LexisNexis, validate citations, or know legal clause libraries. Deployed without matter-level permission configuration, Copilot creates privilege surface risk. Misconfigured access controls can expose one client&apos;s matter to another attorney&apos;s query. <strong>Ethical-wall audit is a priority action.</strong></div></div></div></div>
+  <div class="bg-white p-6 rounded-xl cs"><div class="flex items-start gap-4"><div class="shrink-0 w-10 h-10 bg-black rounded-lg flex items-center justify-center text-brand-orange font-black text-lg">2</div><div class="flex-1"><div class="flex flex-wrap items-center gap-3 mb-2"><div class="font-bold text-xl text-brand-black">Billables.AI</div><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span><div class="text-sm text-brand-grey ml-auto">$59&ndash;$199/user/month</div></div><p class="text-sm text-brand-graphite mb-3">Named Legal Tech Company of the Year at the 2026 Legalweek Awards. Passively captures work across M365, Teams, Adobe, Chrome, Edge, and Zoom without start/stop timers, generating draft time entries with matter matching and billing narratives. Firms report 15&ndash;30% more billable time and approximately 90% reduction in narrative-writing time.</p><div class="p-3 rounded-lg text-sm" style="background:rgba(201,100,11,.04)"><strong class="text-brand-orangeDark">Integration note:</strong> Centerbase launched a native Billables.AI integration in April 2026 and a native NetDocuments ndMAX integration in March 2026, creating a potential fully automated time-capture-to-document-intelligence pipeline for firms using Centerbase as their practice management system.</div></div></div></div>
+  <div class="bg-white p-6 rounded-xl cs"><div class="flex items-start gap-4"><div class="shrink-0 w-10 h-10 bg-black rounded-lg flex items-center justify-center text-brand-orange font-black text-lg">3</div><div class="flex-1"><div class="flex flex-wrap items-center gap-3 mb-2"><div class="font-bold text-xl text-brand-black">HighQ (Thomson Reuters)</div><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span><div class="text-sm text-brand-grey ml-auto">Custom enterprise pricing</div></div><p class="text-sm text-brand-graphite mb-3">TR&apos;s collaboration and matter management platform: secure document sharing, deal rooms, client portals, document automation, workflow builders, and matter dashboards. Right tool for a trademark practice with extensive client-portal needs. Critical signal: HighQ and CoCounsel are both Thomson Reuters products, giving the firm the shortest possible path to CoCounsel through an existing vendor relationship.</p><div class="p-3 rounded-lg text-sm" style="background:rgba(201,100,11,.04)"><strong class="text-brand-orangeDark">Underutilized layer:</strong> Reviews consistently show firms use only HighQ&apos;s document-sharing layer and leave workflow automation untouched due to setup complexity. Whether the automation layer is active determines how much latent value currently sits in this paid investment.</div></div></div></div>
+  <div class="bg-white p-6 rounded-xl cs border-l-4 border-brand-orange"><div class="flex items-start gap-4"><div class="shrink-0 w-10 h-10 bg-brand-orange rounded-lg flex items-center justify-center text-white font-black text-lg">4</div><div class="flex-1"><div class="flex flex-wrap items-center gap-3 mb-2"><div class="font-bold text-xl text-brand-black">ChatGPT Enterprise</div><span class="ro px-2 py-0.5 rounded text-xs font-bold uppercase">Rolling Out</span><div class="text-sm text-brand-grey ml-auto">~$60/user/mo (150-seat min)</div></div><p class="text-sm text-brand-graphite mb-3">The most consequential item in the stack, and the most incomplete. Enterprise tier provides no-training contractual commitments, SOC 2 Type II compliance, SSO/SCIM, and audit logs. The no-training commitment partially addresses the Heppner privilege concern. Rolling out without defined use cases, verification protocols, prompt frameworks, or NIST-aligned governance describes the majority of enterprise AI deployments that produce the 59% no-savings outcome.</p><div class="p-3 rounded-lg text-sm mb-3" style="background:rgba(185,28,28,.06);color:#7f1d1d"><strong>Active risk:</strong> Attorneys using ChatGPT Enterprise for document work are almost certainly copying files out of NetDocuments into the chat window, a data-movement event outside the DMS permission structure and a residual privilege-contamination risk even on the Enterprise tier. The NetDocuments ndConnect MCP integration (launched May 14, 2026) eliminates this by enabling ChatGPT Enterprise to query the document repository within existing permissions, with zero file transfer.</div><div class="p-3 rounded-lg text-sm" style="background:rgba(201,100,11,.04)"><strong class="text-brand-orangeDark">The AI licensing tax:</strong> 150-seat minimum equals $108,000/year. With approximately 37&ndash;65 active users, the firm may be paying for 85&ndash;113 vacant seats while lacking the governance framework to maximize the active ones. Activating those seats through governance and DMS integration is the highest-leverage near-term action available.</div></div></div></div>
+  <div class="bg-white p-6 rounded-xl cs"><div class="flex items-start gap-4"><div class="shrink-0 w-10 h-10 bg-black rounded-lg flex items-center justify-center text-brand-orange font-black text-lg">5</div><div class="flex-1"><div class="flex flex-wrap items-center gap-3 mb-2"><div class="font-bold text-xl text-brand-black">NetDocuments + ndMAX</div><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span><div class="text-sm text-brand-grey ml-auto">Custom enterprise pricing</div></div><p class="text-sm text-brand-graphite mb-3">The firm&apos;s core DMS since 2020, housing decades of trademark briefs, clearance opinions, prosecution correspondence, and licensing agreements. On <strong>May 14, 2026</strong>, NetDocuments launched an industry-first <a href="https://www.netdocuments.com/company-news/netdocuments-unveils-context-graph-legal-platform/" target="_blank" class="ml">Legal Context Graph</a> and ndConnect MCP Server. ChatGPT Enterprise and Claude can now query the firm&apos;s document repository within existing permissions and ethical walls, without any file transfer. This became available three weeks ago and has not been activated.</p><div class="p-3 rounded-lg text-sm" style="background:rgba(201,100,11,.04)"><strong class="text-brand-orangeDark">Why this is the highest-priority action:</strong> ndConnect MCP connects ChatGPT Enterprise to decades of institutional knowledge built by 20 WTR 1000-ranked attorneys. It costs $0 in additional software. It eliminates the file-transfer privilege risk happening today. It is the most immediate win available.</div></div></div></div>
+</div>
+<h4 class="text-xl font-bold text-brand-black mb-4">Coverage Matrix: What the Current Stack Addresses</h4>
+<div class="overflow-x-auto bg-white rounded-xl cs mb-6">
+<table class="w-full text-left border-collapse text-sm">
+<thead><tr class="bg-black text-white"><th class="p-4 font-semibold">Capability Area</th><th class="p-4 text-center font-semibold">Copilot</th><th class="p-4 text-center font-semibold">Billables.AI</th><th class="p-4 text-center font-semibold">HighQ</th><th class="p-4 text-center font-semibold">ChatGPT</th><th class="p-4 text-center font-semibold">NetDocs</th></tr></thead>
+<tbody class="divide-y divide-brand-platinum">
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-medium">Billing &amp; Time Capture</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center"><span class="cv">&#10003;</span></td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-medium">M365 Productivity</td><td class="p-3 text-center"><span class="cv">&#10003;</span></td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-medium">Document Management &amp; Collaboration</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center"><span class="cv">&#10003;</span></td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center"><span class="cv">&#10003;</span></td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-medium">General AI Tasks</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center text-brand-grey">&ndash;</td><td class="p-3 text-center"><span class="pt">&#9651;</span></td><td class="p-3 text-center text-brand-grey">&ndash;</td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">Client Intake &amp; CRM</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">After-Hours Prospect Response</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">Legal Research (Citation-Verified)</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">DMS-Integrated AI (no file transfer)</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">Regulatory Tracking (tech/privacy/AI law)</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">AI Search Visibility (AEO/GEO)</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+<tr style="background:rgba(185,28,28,.04)"><td class="p-3 font-bold">AI Governance Framework</td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td><td class="p-3 text-center"><span class="nc">&#10007;</span></td></tr>
+</tbody>
+<tfoot><tr class="bg-brand-platinum text-xs text-brand-grey"><td class="p-3 italic" colspan="6">&#10003; Covered &nbsp; &#9651; Partial / ungoverned &nbsp; &#10007; Not addressed</td></tr></tfoot>
+</table>
+</div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-market.webp" alt=""><div class="ov"><div class="ac"></div><h3>AI Tool Landscape</h3><p>Full Stack Evaluation, Current Tools &amp; Available Additions</p></div></div>
+<section id="tools">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">3. AI Tool Landscape</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-6">The legal AI tool market spans a 100x price range. For Pirkey Barber, the relevant categories are research and drafting tools, contract and transactional tools, practice management and intake, and AI search visibility tooling. Two natural upgrade paths require no new vendor relationships: HighQ and CoCounsel share the same Thomson Reuters account, and Spellbook operates as a native Word add-in layered on top of the Copilot foundation already deployed.</p>
+<div class="overflow-x-auto bg-white rounded-xl cs mb-8">
+<table class="w-full text-left border-collapse text-sm">
+<thead><tr class="bg-black text-white"><th class="p-3 font-semibold">Tool</th><th class="p-3 font-semibold">Category</th><th class="p-3 font-semibold">Status</th><th class="p-3 font-semibold">Key Notes</th></tr></thead>
+<tbody class="divide-y divide-brand-platinum">
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Microsoft Copilot</td><td class="p-3 text-brand-grey">Productivity AI</td><td class="p-3"><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span></td><td class="p-3 text-brand-graphite">M365 productivity wins; not legal-specific; ethical-wall audit priority; natural foundation for Spellbook</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Billables.AI</td><td class="p-3 text-brand-grey">Time Capture</td><td class="p-3"><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span></td><td class="p-3 text-brand-graphite">Legalweek Company of Year 2026; 15&ndash;30% more billable time; billing scope only; Centerbase integration available</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">HighQ (Thomson Reuters)</td><td class="p-3 text-brand-grey">Matter Mgmt</td><td class="p-3"><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span></td><td class="p-3 text-brand-graphite">TR relationship = CoCounsel pathway; deal rooms; workflow automation layer underused</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">ChatGPT Enterprise</td><td class="p-3 text-brand-grey">General AI</td><td class="p-3"><span class="ro px-2 py-0.5 rounded text-xs font-bold uppercase">Rolling Out</span></td><td class="p-3 text-brand-graphite">No-training contract; SOC 2; governance and DMS integration not yet built; AI licensing tax risk</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">NetDocuments + ndMAX</td><td class="p-3 text-brand-grey">DMS + AI</td><td class="p-3"><span class="iu px-2 py-0.5 rounded text-xs font-bold uppercase">In Use</span></td><td class="p-3 text-brand-graphite">Legal Context Graph + ndConnect MCP launched May 14, 2026; integration available but not yet activated</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">CoCounsel (Thomson Reuters)</td><td class="p-3 text-brand-grey">Legal Research</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">Westlaw + Practical Law integration; multi-model; 1M+ users; natural upgrade from HighQ through existing TR relationship</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Spellbook</td><td class="p-3 text-brand-grey">Contract Drafting</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">Native Word add-in; clause benchmarking; builds on Copilot foundation; near-zero adoption friction for transactional work</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Lawmatics</td><td class="p-3 text-brand-grey">CRM / Intake</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">Legal CRM with AI-powered lead scoring and intake automation; directly addresses the 42/100 Client Acquisition gap</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Smith.ai / NextPhone</td><td class="p-3 text-brand-grey">AI Receptionist</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">24/7 after-hours intake; CRM integration available; NextPhone at flat-rate unlimited calls</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Lexis+ with Prot&eacute;g&eacute;</td><td class="p-3 text-brand-grey">Legal Research</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">Alternative to CoCounsel; Shepard&apos;s citation validation; Anthropic + OpenAI models available</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Harvey AI</td><td class="p-3 text-brand-grey">Legal Research</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">Am Law 100 standard; high minimum commitment; at boutique scale, CoCounsel delivers comparable research value at a fraction of the cost</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">AEO/GEO Tooling</td><td class="p-3 text-brand-grey">AI Search Visibility</td><td class="p-3"><span class="text-brand-grey text-xs">Not In Use</span></td><td class="p-3 text-brand-graphite">SEO intelligence + AI citation monitoring; tracks brand mentions across ChatGPT, Gemini, and Perplexity; activates authority signals for AI-search citation</td></tr>
+</tbody>
+</table>
+</div>
+<div class="bg-black text-white p-6 rounded-xl cs">
+  <div class="text-brand-orange font-bold text-lg mb-3">Two Natural Upgrade Paths, No New Vendor Relationships Required</div>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="border-l-4 border-brand-orange pl-4"><div class="font-bold text-brand-orangeLight mb-1">HighQ to CoCounsel (Thomson Reuters)</div><p class="text-sm" style="color:#EBEBEB">Both products share the same vendor, likely the same account rep, and increasingly integrated infrastructure. CoCounsel delivers citation-verified legal research on Westlaw and Practical Law content. An expansion conversation through an existing TR relationship.</p></div>
+    <div class="border-l-4 border-brand-orangeMed pl-4"><div class="font-bold text-brand-orangeLight mb-1">Copilot to Spellbook (Microsoft Word)</div><p class="text-sm" style="color:#EBEBEB">Spellbook layers legal clause intelligence on top of the Word environment attorneys already use with Copilot every day. Adoption friction is near zero. Directly relevant to the firm&apos;s licensing and transactional work.</p></div>
+  </div>
+</div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-scenarios.webp" alt=""><div class="ov"><div class="ac"></div><h3>Client Acquisition &amp; AI-Powered Growth</h3><p>Closing the 42/100 Gap, The Fastest Available ROI</p></div></div>
+<section id="acquisition">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">4. Client Acquisition &amp; AI-Powered Growth</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-6">None of the five deployed tools address client acquisition, intake automation, or CRM. The foundational benchmark: a Harvard Business Review study (2,241 firms, 100,000+ web leads) found firms responding within five minutes are <a href="https://www.myclone.is/blog/ai-powered-intake-transforming-law-firms" target="_blank" class="ml">100 times more likely to connect</a> and 21 times more likely to qualify a lead than firms waiting 30 minutes. Approximately 35&ndash;40% of legal-services search traffic arrives outside business hours. The firm&apos;s current 2&ndash;5 business-day intake cycle is measurably losing high-intent brand-owner inquiries.</p>
+<div class="bg-black text-white p-6 rounded-xl cs mb-8">
+  <div class="text-brand-orange font-bold text-lg mb-3">Documented Outcome: AI-Driven Intake Deployment</div>
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-3xl font-black text-brand-orange">386</div><div class="text-sm text-brand-grey mt-1">Leads in Month 1 at a comparable firm, highest in its history (+19% over prior average)</div></div>
+    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-3xl font-black text-brand-orange">31&rarr;49%</div><div class="text-sm text-brand-grey mt-1">Lead-to-schedule conversion rate over three months following deployment</div></div>
+    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-3xl font-black text-brand-orange">3&ndash;5x</div><div class="text-sm text-brand-grey mt-1">Industry-documented ROI within six months for AI-driven intake deployment</div></div>
+  </div>
+</div>
+<div class="overflow-x-auto bg-white rounded-xl cs">
+<table class="w-full text-left border-collapse text-sm">
+<thead><tr class="bg-black text-white"><th class="p-3 font-semibold">Tool / Category</th><th class="p-3 font-semibold">Use Case for Pirkey Barber</th></tr></thead>
+<tbody class="divide-y divide-brand-platinum">
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Legal CRM with AI Intake</td><td class="p-3 text-brand-graphite">AI-powered lead scoring, conditional intake workflows, automated follow-up sequences, and conversion tracking purpose-built for law firms</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">24/7 AI Receptionist</td><td class="p-3 text-brand-graphite">After-hours phone and chat intake; matter-type qualification and conflicts pre-screen; integrates with legal CRM; live-agent hybrid for high-touch matters</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">SEO &amp; AI Search Monitoring</td><td class="p-3 text-brand-graphite">Trademark keyword tracking, AI Overview monitoring for practice-area queries, competitor content intelligence</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Content Optimization</td><td class="p-3 text-brand-graphite">Practice-area page optimization against top-ranking competitors; answer-first content architecture for AI-search citation eligibility</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Paid Acquisition</td><td class="p-3 text-brand-graphite">High-intent brand-owner acquisition with pay-per-qualified-lead model; Google Guaranteed badge adds credibility for enterprise prospects</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/theme-competitive-edge.webp" alt=""><div class="ov"><div class="ac"></div><h3>AI Search Revolution: AEO &amp; GEO</h3><p>Answer Engine &amp; Generative Engine Optimization</p></div></div>
+<section id="aeo">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">5. AI Search Revolution: AEO &amp; GEO</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-6">ChatGPT reached 900 million weekly active users as of February 2026, processing approximately <a href="https://quickseo.ai/blog/chatgpt-vs-google-search-in-2026-market-share-user-data-what-it-means-for-seo" target="_blank" class="ml">2.5 billion prompts per day</a>, roughly 17% of global digital queries. Perplexity AI grew 192% year-over-year to 153 million monthly visits. Gartner projects traditional search volume will decline 25% by end of 2026. Google AI Overviews appear on approximately 20.5% of all searches and 23.6% of legal queries. Critically, 80% of LLM citations link to pages not in Google&apos;s top 100, so traditional SEO alone cannot secure AI-platform visibility. LLM-referred traffic converts at <strong>4.4 times</strong> the rate of traditional search, reflecting significantly stronger purchase intent among AI-referred prospects.</p>
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+  <div class="bg-white p-6 rounded-xl cs">
+    <div class="font-bold text-lg text-brand-black mb-3">Answer Engine Optimization (AEO)</div>
+    <p class="text-sm text-brand-graphite mb-4">AEO structures the firm&apos;s content so AI crawlers extract and cite it directly in generated answers. The 2026 technical foundation includes LegalService schema with practice areas, Attorney/Person schema with bar credentials and jurisdiction, FAQPage schema on all FAQ content, and LocalBusiness schema with accurate contact data. Content must lead with a direct answer; AI systems extract the leading sentence.</p>
+    <div class="space-y-2 text-sm text-brand-graphite">
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>LegalService, Attorney/Person, FAQPage, LocalBusiness schema markup throughout</div>
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>H1/H2/H3 hierarchy organized from broad topic to specific answer</div>
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>Definition-first paragraphs under 60 words following target terms</div>
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>FAQ and HowTo schema on question-and-answer content throughout</div>
+    </div>
+  </div>
+  <div class="bg-white p-6 rounded-xl cs">
+    <div class="font-bold text-lg text-brand-black mb-3">Generative Engine Optimization (GEO)</div>
+    <p class="text-sm text-brand-graphite mb-4">GEO aims to get ChatGPT, Perplexity, Gemini, and Copilot to name Pirkey Barber when a GC searches for trademark counsel in Austin. Over 76% of AI citations come from pages already in Google&apos;s top 10, so strong SEO remains the foundation. The firm&apos;s WTR 1000 rankings, Chambers USA recognition, and Best Lawyers designations are exactly what AI platforms prefer to cite, but only if structured for machine readability.</p>
+    <div class="space-y-2 text-sm text-brand-graphite">
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>Authoritative off-site mentions in legal publications and bar resources</div>
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>Press releases via authoritative newswires to build citation-worthy reference material</div>
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>Original research content: annual trademark litigation trend reviews and practice guides</div>
+      <div class="flex gap-2"><span class="text-brand-orange">&#9656;</span>Entity signals: attorney names, practice areas, jurisdictions, and awards structured for machine readability</div>
+    </div>
+  </div>
+</div>
+<div class="bg-black text-white p-6 rounded-xl cs mb-8">
+  <div class="text-brand-orange font-bold text-lg mb-3">The First-Mover Window</div>
+  <p class="text-sm mb-4" style="color:#EBEBEB">Fewer than 5% of law firms have any formal AEO/GEO strategy. Pirkey Barber&apos;s WTR 1000 rankings, Chambers USA recognition, and 20 ranked attorneys represent precisely the authority signals AI platforms prefer to cite. Once an LLM builds a consistent association between "trademark prosecution" and "Pirkey Barber PLLC," that association compounds with every subsequent query. The first firms to structure their authority for machine readability will hold a position their peers cannot quickly replicate.</p>
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-2xl font-black text-brand-orange">Month 6</div><div class="text-sm text-brand-grey mt-1">Initial citations established; brand appears in targeted trademark queries across AI platforms</div></div>
+    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-2xl font-black text-brand-orange">Month 12</div><div class="text-sm text-brand-grey mt-1">5&ndash;15 citations built; consistent presence for Austin trademark and IP queries</div></div>
+    <div class="text-center p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-2xl font-black text-brand-orange">Month 24+</div><div class="text-sm text-brand-grey mt-1">Citations reinforce citations; compounding organic AI-referral traffic at near-zero acquisition cost</div></div>
+  </div>
+</div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/theme-competitive-edge.webp" alt=""><div class="ov"><div class="ac"></div><h3>Competitive Landscape: Austin</h3><p>IP &amp; Technology Law Market, AI Maturity Analysis</p></div></div>
+<section id="competitive">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">6. Competitive Landscape: Austin, Texas</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-8">The Austin IP and technology law market is bifurcated. National-firm Austin offices have made AI a market positioning story with named tools, innovation officers, and published governance programs. Among Austin IP boutiques, the gap is narrowing: Wittliff Cutter Saba publicly markets AI use for legal research and case strategy on its website, making it the most AI-forward of the direct boutique competitors. Pirkey Barber is the most heavily invested on infrastructure. The first-mover window in the boutique tier remains open, but the window is closing.</p>
+<div class="overflow-x-auto bg-white rounded-xl cs mb-8">
+<table class="w-full text-left border-collapse">
+<thead><tr class="bg-black text-white"><th class="p-4 font-semibold">Firm</th><th class="p-4 font-semibold">Type</th><th class="p-4 font-semibold">Maturity</th><th class="p-4 font-semibold">Known AI Positioning</th></tr></thead>
+<tbody class="divide-y divide-brand-platinum">
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">DLA Piper (Austin)</td><td class="p-4 text-sm text-brand-grey">Global, Austin office</td><td class="p-4"><span class="ti px-3 py-1 rounded-full text-xs font-bold uppercase">Advanced</span></td><td class="p-4 text-sm text-brand-graphite">Harvey AI to 5,000+ attorneys globally; M365 Copilot firmwide; dedicated Chief Innovation Officer; AI centre of excellence</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">Baker Botts (Austin)</td><td class="p-4 text-sm text-brand-grey">National, Austin office</td><td class="p-4"><span class="ti px-3 py-1 rounded-full text-xs font-bold uppercase">Advanced</span></td><td class="p-4 text-sm text-brand-graphite">Custom Gemini client-scoring tool; "Foundation" KM platform; 60+ lawyer AI practice group; #1 Law Firm for Business &amp; Innovation, Bloomberg Law (July 2025)</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">Perkins Coie (Austin)</td><td class="p-4 text-sm text-brand-grey">National, Austin office</td><td class="p-4"><span class="ti px-3 py-1 rounded-full text-xs font-bold uppercase">Advanced</span></td><td class="p-4 text-sm text-brand-graphite">Proprietary "PC Chat" in-house AI assistant; Relativity aiR for Review; firmwide GenAI governance team; BTI-recognized</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">Fish &amp; Richardson (Austin)</td><td class="p-4 text-sm text-brand-grey">National IP firm</td><td class="p-4"><span class="td px-3 py-1 rounded-full text-xs font-bold uppercase">Developing</span></td><td class="p-4 text-sm text-brand-graphite">Strong IP/AI thought leadership; no confirmed internal deployment; frames AI primarily as an inventorship and disclosure risk for clients</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">Wittliff Cutter Saba</td><td class="p-4 text-sm text-brand-grey">Austin IP + commercial litigation boutique</td><td class="p-4"><span class="td px-3 py-1 rounded-full text-xs font-bold uppercase">Developing</span></td><td class="p-4 text-sm text-brand-graphite">Chambers USA dual recognition (IP and commercial litigation). Website publicly states: "We harness artificial intelligence to streamline legal research, strengthen case strategy, and deliver efficient, cost-effective results." Advises clients across AI sectors. Most AI-forward Austin boutique competitor.</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">Slayden Grubert Beard PLLC</td><td class="p-4 text-sm text-brand-grey">Austin IP boutique (13 attorneys)</td><td class="p-4"><span class="tu px-3 py-1 rounded-full text-xs font-bold uppercase">Unknown</span></td><td class="p-4 text-sm text-brand-graphite">Full-range IP: patents, trademarks, copyright, licensing, and IP litigation. Chambers Texas Spotlight, three consecutive years. European Patent Office practice without local counsel. No confirmed AI program or public AI disclosure.</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-4 font-bold text-brand-black">Botkin Chiarello Calaf PLLC</td><td class="p-4 text-sm text-brand-grey">Austin IP + commercial litigation boutique (est. 2023)</td><td class="p-4"><span class="tu px-3 py-1 rounded-full text-xs font-bold uppercase">Unknown</span></td><td class="p-4 text-sm text-brand-graphite">Formed by six Wittliff Cutter partners. Chambers Spotlight recognition for IP disputes. Tier 1 commercial litigation per Best Lawyers. Publishes AI-related thought leadership on trade secrets and IP protection. No confirmed internal AI program.</td></tr>
+<tr style="background:rgba(201,100,11,.1)"><td class="p-4 font-bold" style="color:#8B4507">Pirkey Barber PLLC</td><td class="p-4 text-sm text-brand-grey">Austin IP boutique</td><td class="p-4"><span class="tc px-3 py-1 rounded-full text-xs font-bold uppercase">Developing</span></td><td class="p-4 text-sm text-brand-graphite">5 tools deployed; governance absent; DMS integration not activated; no intake/CRM; no AEO/GEO. Highest infrastructure investment of any Austin boutique. <strong>First-mover window open to govern and differentiate.</strong></td></tr>
+</tbody>
+</table>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+  <div class="bg-white p-5 rounded-xl cs border-t-4 border-black"><div class="font-bold text-brand-black mb-2">AI Licensing Tax</div><p class="text-sm text-brand-graphite">$108,000/year minimum on ChatGPT Enterprise spread across 37&ndash;65 active users creates seat-vacancy waste. Without governance and DMS integration, the firm pays enterprise-tier costs for sub-enterprise outcomes.</p></div>
+  <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#C9640B"><div class="font-bold text-brand-black mb-2">Flat-Fee Margin Pressure</div><p class="text-sm text-brand-graphite">Trademark prosecution and clearance operates largely on fixed fees. Competitors deploying automated drafting and research tools can deliver these services faster, compressing rates industrywide. Firms that automate protect margins.</p></div>
+  <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#D4891F"><div class="font-bold text-brand-black mb-2">The Boutique Peer Gap</div><p class="text-sm text-brand-graphite">Wittliff Cutter Saba is publicly marketing AI use while Pirkey Barber, with significantly more AI infrastructure, has not yet governed or activated it. That gap needs to close before it inverts.</p></div>
+</div>
+</section>
+
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-results.webp" alt=""><div class="ov"><div class="ac"></div><h3>Regulatory &amp; Compliance</h3><p>Active Framework, Texas, Federal, Multi-Jurisdiction</p></div></div>
+<section id="regulatory">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">7. Regulatory &amp; Compliance</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-8">As a Texas-headquartered firm with California and DC attorneys handling ultra-sensitive IP data, Pirkey Barber faces a layered compliance environment that has grown significantly more specific in the past 18 months. The ChatGPT Enterprise rollout, without a governance framework, creates active exposure across multiple regulatory layers simultaneously.</p>
+<div class="overflow-x-auto bg-white rounded-xl cs mb-8">
+<table class="w-full text-left border-collapse text-sm">
+<thead><tr class="bg-black text-white"><th class="p-4 font-semibold">Regulation</th><th class="p-4 font-semibold">Body</th><th class="p-4 font-semibold">Date</th><th class="p-4 font-semibold">Key Requirement</th><th class="p-4 font-semibold">Impact on Pirkey Barber</th></tr></thead>
+<tbody class="divide-y divide-brand-platinum">
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">ABA Formal Opinion 512</td><td class="p-3 text-brand-grey">ABA Ethics Committee</td><td class="p-3 text-brand-grey">July 2024</td><td class="p-3 text-brand-graphite">Competence; confidentiality (matter-specific consent, boilerplate insufficient); supervision; billing transparency</td><td class="p-3 text-brand-graphite">National baseline; governs all five deployed tools</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">Texas Opinion 705</td><td class="p-3 text-brand-grey">Texas Professional Ethics Committee</td><td class="p-3 text-brand-grey">Feb 2025</td><td class="p-3 text-brand-graphite">Reasonable AI understanding; protect confidential data; independently verify all AI outputs; fair billing</td><td class="p-3 text-brand-graphite">Directly governs as a TX firm; all five tools in scope</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">TRAIGA (HB 149)</td><td class="p-3 text-brand-grey">Texas Legislature; AG enforcement</td><td class="p-3 text-brand-grey">Effective Jan 1, 2026</td><td class="p-3 text-brand-graphite">Intent-based prohibitions; NIST AI RMF safe harbor; 60-day cure; AG enforcement only</td><td class="p-3 text-brand-graphite">Penalties up to $200,000/violation. In effect now. No confirmed governance framework currently in place.</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">United States v. Heppner</td><td class="p-3 text-brand-grey">S.D.N.Y. (Judge Rakoff)</td><td class="p-3 text-brand-grey">Feb 2026</td><td class="p-3 text-brand-graphite">Communications with public AI platforms not protected by attorney-client privilege</td><td class="p-3 text-brand-graphite">ChatGPT Enterprise no-training contract partially addresses this; file-transfer behavior creates residual risk</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">N.D. Tex. LR 7.2(f) / S.D. Tex. GO 2025-04</td><td class="p-3 text-brand-grey">U.S. District Courts</td><td class="p-3 text-brand-grey">2025</td><td class="p-3 text-brand-graphite">Mandatory disclosure and attorney verification of AI use in all filings</td><td class="p-3 text-brand-graphite">All federal litigation and TTAB matters in scope</td></tr>
+<tr class="hover:bg-brand-orangeTint"><td class="p-3 font-bold text-brand-black">California Proposed Amendments</td><td class="p-3 text-brand-grey">California State Bar</td><td class="p-3 text-brand-grey">Aug 2025 (proposed)</td><td class="p-3 text-brand-graphite">Exposing client data to external systems may constitute confidentiality breach if material unauthorized-access risk exists</td><td class="p-3 text-brand-graphite">Directly relevant to Bay Area attorneys; affects ChatGPT Enterprise and Copilot use on CA client matters</td></tr>
+</tbody>
+</table>
+</div>
+<h4 class="text-xl font-bold text-brand-black mb-4">The Cost of Unverified AI Output: Three Documented Precedents</h4>
+<div class="grid md:grid-cols-3 gap-6 mb-8">
+  <div class="bg-white p-5 rounded-xl cs border-t-4 border-black">
+    <div class="text-sm font-bold text-brand-grey uppercase tracking-wide mb-2">April 2026, D. Or.</div>
+    <div class="font-bold text-brand-black text-lg mb-1"><a href="https://www.abajournal.com/news/article/oregon-federal-judge-hands-down-110000-penalty-for-ai-errors" target="_blank" class="ml">Couvrette v. Wisnovsky</a></div>
+    <div class="text-3xl font-black text-brand-black mb-2">$110,000+</div>
+    <p class="text-sm text-brand-graphite">Largest AI-hallucination penalty in U.S. legal history. Two attorneys sanctioned $15,500 in fines + $80,500 in opposing counsel fees after three briefs contained 15 nonexistent cases and 8 fabricated quotations. <strong>Case dismissed with prejudice.</strong></p>
+  </div>
+  <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#C9640B">
+    <div class="text-sm font-bold text-brand-grey uppercase tracking-wide mb-2">2025, Federal</div>
+    <div class="font-bold text-brand-black text-lg mb-1"><a href="https://reason.com/volokh/2025/05/13/ai-hallucination-in-filings-involving-14th-largest-u-s-law-firm-lead-to-31k-in-sanctions/" target="_blank" class="ml">Lacey v. State Farm</a></div>
+    <div class="text-3xl font-black mb-2" style="color:#C9640B">$31,100</div>
+    <p class="text-sm text-brand-graphite">Special Master sanctions after a brief from the 14th-largest U.S. law firm contained 9 incorrect AI-generated citations. The firm&apos;s resources and reputation provided no protection from the penalty or the reputational exposure.</p>
+  </div>
+  <div class="bg-white p-5 rounded-xl cs border-t-4" style="border-top-color:#808182">
+    <div class="text-sm font-bold text-brand-grey uppercase tracking-wide mb-2">June 2023, S.D.N.Y.</div>
+    <div class="font-bold text-brand-black text-lg mb-1"><a href="https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2022cv01461/575368/54/" target="_blank" class="ml">Mata v. Avianca</a></div>
+    <div class="text-3xl font-black text-brand-grey mb-2">$5,000</div>
+    <p class="text-sm text-brand-graphite">The defining precedent. Judge Castel&apos;s 46-page sanctions order for six fabricated citations became the blueprint that state bars, malpractice carriers, and dozens of subsequent courts cite as the cautionary standard for unverified AI output. Couvrette superseded it at 22x the penalty. The trajectory is moving in one direction.</p>
+  </div>
+</div>
+<div class="bg-white p-6 rounded-xl cs">
+  <div class="font-bold text-lg text-brand-black mb-4">Compliance Checklist, Seven Priority Actions</div>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="space-y-3">
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">1</span><span class="text-brand-graphite"><strong class="text-brand-black">Activate NetDocuments ndConnect MCP.</strong> Connect ChatGPT Enterprise to the DMS within permission-aware boundaries. Eliminates file-transfer risk at $0 additional software cost.</span></div>
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">2</span><span class="text-brand-graphite"><strong class="text-brand-black">Adopt a written, enforced AI policy.</strong> Close the governance gap in the active ChatGPT Enterprise rollout; define approved tools, prohibited use cases, and oversight responsibilities.</span></div>
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">3</span><span class="text-brand-graphite"><strong class="text-brand-black">Implement matter-specific informed consent.</strong> Per ABA Opinion 512 and Texas Opinion 705. Boilerplate engagement language is explicitly insufficient.</span></div>
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">4</span><span class="text-brand-graphite"><strong class="text-brand-black">Adopt the NIST AI Risk Management Framework.</strong> Secure TRAIGA safe-harbor protection; maintain audit trails. Without NIST alignment, each AI deployment carries uncapped $200,000/violation exposure.</span></div>
+    </div>
+    <div class="space-y-3">
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">5</span><span class="text-brand-graphite"><strong class="text-brand-black">Build a mandatory human-verification protocol.</strong> All AI outputs reviewed before client delivery or court filing. Required by Texas Opinion 705 and N.D./S.D. Texas local rules.</span></div>
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">6</span><span class="text-brand-graphite"><strong class="text-brand-black">Configure Copilot M365 ethical walls.</strong> Audit current matter-level permission structure; confirm ethical wall enforcement for multi-client scenarios before the next sensitive matter interaction.</span></div>
+      <div class="flex items-start gap-3 text-sm"><span class="w-6 h-6 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">7</span><span class="text-brand-graphite"><strong class="text-brand-black">Train CA-based and DC attorneys separately.</strong> California proposed amendments and DC ethics guidance impose distinct requirements from Texas Opinion 705; jurisdiction-specific training is required.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-results.webp" alt=""><div class="ov"><div class="ac"></div><h3>The First Step</h3><p>Discovery &amp; Strategy, $10,000 Fixed Fee &middot; 2&ndash;4 Weeks</p></div></div>
+<section id="firststep">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">8. The First Step</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-8">Before any implementation decision is made, the Discovery and Strategy engagement produces the specificity needed to make it confidently. The firm already carries significant AI subscription costs. The governance gap already exists. The ChatGPT Enterprise rollout is already underway. The Discovery phase doesn&apos;t delay action; it defines which actions deliver value immediately and which belong in a later phase. The committee reviews the roadmap and financial model before committing to any implementation spend.</p>
+<div class="bg-white rounded-xl cs overflow-hidden border-2 border-black">
+    <div class="bg-black px-8 py-6">
+      <div class="text-brand-orange text-sm font-bold uppercase tracking-widest mb-2">Archificials, Entry Point Engagement</div>
+      <div class="text-white text-3xl font-black">Discovery &amp; Strategy</div>
+      <div class="flex gap-8 mt-4">
+        <div><div class="text-2xl font-black text-white">$10,000</div><div class="text-xs text-brand-grey uppercase tracking-wide mt-1">Fixed fee</div></div>
+        <div class="border-l border-white/20 pl-6"><div class="text-2xl font-black text-white">2&ndash;4 weeks</div><div class="text-xs text-brand-grey uppercase tracking-wide mt-1">Sprint timeline</div></div>
+        <div class="border-l border-white/20 pl-6"><div class="text-2xl font-black text-white">4</div><div class="text-xs text-brand-grey uppercase tracking-wide mt-1">Deliverables</div></div>
+      </div>
+    </div>
+    <div class="p-8 space-y-6">
+      <div class="border-l-4 border-brand-black pl-5">
+        <div class="font-bold text-brand-black text-base mb-2">01. Workflow Map</div>
+        <p class="text-sm text-brand-graphite leading-relaxed">Before anything changes, Archificials conducts a structured review of how the firm actually operates: how trademark matters flow from intake through clearance, prosecution, opposition, and litigation; where each of the five deployed tools is creating value and where it is creating unaddressed risk; and where the highest-value attorney time is going that AI could reclaim. The review maps the specific integration gaps between NetDocuments, ChatGPT Enterprise, HighQ, Copilot, and Billables.AI, including the places where those tools currently require attorneys to manually bridge what automation could handle. The output is a workflow map that shows exactly where the existing investment is working, where it isn&apos;t, and where specific interventions would produce the highest return. It also serves as the baseline for measuring the impact of everything that follows.</p>
+      </div>
+      <div class="border-l-4 border-brand-black pl-5">
+        <div class="font-bold text-brand-black text-base mb-2">02. Compliance Audit</div>
+        <p class="text-sm text-brand-graphite leading-relaxed">With ChatGPT Enterprise actively rolling out and TRAIGA now in effect, this audit requires immediate action. Archificials reviews every AI tool in the current stack against ABA Formal Opinion 512, Texas Opinion 705, TRAIGA&apos;s deployer obligations, the Heppner privilege ruling, and applicable N.D./S.D. Texas local rules. For a firm with Bay Area attorneys, California&apos;s proposed amendments are assessed separately; DC ethics guidance is reviewed for the DC-based practice. The output identifies what governance needs to be in place before the next filing, what can be phased across 90 days, and what constitutes the firm&apos;s current exposure under each regulatory layer. Given the $110,000 Couvrette precedent and TRAIGA&apos;s $200,000/violation ceiling, the audit also quantifies the risk that a governed program eliminates.</p>
+      </div>
+      <div class="border-l-4 border-brand-black pl-5">
+        <div class="font-bold text-brand-black text-base mb-2">03. Prioritized Roadmap</div>
+        <p class="text-sm text-brand-graphite leading-relaxed">Built entirely from what was discovered in the workflow map and compliance audit, not from a generic best-practice template. Every recommendation acknowledges the firm&apos;s existing investments, existing vendor relationships, and the realistic adoption capacity of the attorneys who will use it. The roadmap is phased and sequenced by two variables: impact and adoption readiness. The Phase 01 actions deliver value within 90 days by activating what the firm already pays for and closing the compliance exposure that already exists. Phase 02 defines the capability areas to build next, with the sequencing determined by what the workflow map surfaces as highest priority. Phase 03 activates the authority signals the firm has earned over decades and structures them for AI-search citation visibility. The committee receives a clear view of what happens when and why each action is ordered as it is.</p>
+      </div>
+      <div class="border-l-4 border-brand-black pl-5">
+        <div class="font-bold text-brand-black text-base mb-2">04. Financial Model</div>
+        <p class="text-sm text-brand-graphite leading-relaxed">A scenario-based financial model that the committee can take to partners for budget approval. Expected outcomes under each investment path, with payback period estimates grounded in the firm&apos;s specific billing rates, matter mix, and confirmed actuals from the workflow map. The model shows what each phase is projected to return and over what timeframe, using conservative industry benchmarks adjusted for the firm&apos;s profile. It is specific enough to act on. A placeholder with ranges too wide to be useful does not support a budget conversation; this model does. The financial model is the deliverable that turns the Discovery engagement into an internal business case the committee can present to partners for budget approval.</p>
+      </div>
+      <div class="border-t border-brand-platinum pt-5 mt-5">
+        <p class="text-sm text-brand-graphite">The Discovery and Strategy engagement produces a defensible, actionable plan before any implementation budget is committed. The committee reviews the roadmap and financial model, validates the priorities against internal knowledge of the firm, and makes an informed decision about what to build and in what order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-scenarios.webp" alt=""><div class="ov"><div class="ac"></div><h3>An Approach by Phases</h3><p>Protect &middot; Propel &middot; Presence</p></div></div>
+<section id="scenarios">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">9. An Approach by Phases</h3>
+<p class="text-lg text-brand-graphite leading-relaxed mb-8">The implementation is structured in three phases because the work is not uniform. Phase 01 addresses what is already deployed and already exposed. Phase 02 builds the capabilities the firm does not yet have, with scope and sequencing determined by the Discovery roadmap. Phase 03 activates the firm&apos;s existing authority for AI-search visibility. Each phase builds on the foundation of the previous one, and the sequencing ensures the firm never commits to Phase 02 spend before Phase 01 has demonstrated the infrastructure can support it. All specific scope, timelines, and investment figures are determined after Discovery.</p>
+
+<div class="grid md:grid-cols-3 gap-6 mb-10">
+  <div class="bg-white p-6 rounded-xl cs border-t-4" style="border-top-color:#000000">
+    <div class="text-4xl font-black mb-3" style="color:#000000">01</div>
+    <div class="font-bold text-xl text-brand-black mb-3">A unified, governed AI system</div>
+    <p class="text-sm text-brand-graphite">The five deployed AI tools operate as an integrated system rather than isolated subscriptions. ChatGPT Enterprise is governed, verified, and connected to 20 years of institutional knowledge through the NetDocuments ndConnect MCP integration. Attorneys use it confidently within clear use-case guidelines. Every filing that touches AI output has an auditable verification record. TRAIGA safe-harbor compliance is documented. The $110,000 Couvrette scenario is not possible here.</p>
+  </div>
+  <div class="bg-white p-6 rounded-xl cs border-t-4" style="border-top-color:#C9640B">
+    <div class="text-4xl font-black mb-3" style="color:#C9640B">02</div>
+    <div class="font-bold text-xl text-brand-black mb-3">High-intent inquiries captured in minutes</div>
+    <p class="text-sm text-brand-graphite">A brand manager at a Fortune 500 company contacts the firm at 9 p.m. to discuss a trademark infringement threat. Within three minutes, they have confirmed receipt, a qualified intake record exists in the CRM, a conflicts pre-screen is underway, and calendar options are in their inbox. The 2&ndash;5 business-day intake cycle is gone. 4&ndash;8 additional retained matters per month is the documented industry outcome for firms that make this change.</p>
+  </div>
+  <div class="bg-white p-6 rounded-xl cs border-t-4" style="border-top-color:#8B4507">
+    <div class="text-4xl font-black mb-3" style="color:#8B4507">03</div>
+    <div class="font-bold text-xl text-brand-black mb-3">The firm&apos;s authority becomes machine-readable</div>
+    <p class="text-sm text-brand-graphite">A GC at a technology company asks ChatGPT for the best trademark litigation firm in Austin. Pirkey Barber&apos;s name appears. That citation is the product of 20 WTR 1000-ranked attorneys, decades of precedent, and Chambers USA recognition, finally structured so AI platforms can find and surface it. The compounding effect of 12 months of AI-citation building means the gap between Pirkey Barber and any boutique peer that starts later is structurally difficult to close.</p>
+  </div>
+</div>
+
+<h4 class="text-xl font-bold text-brand-black mb-4">The Approach: Three Phases, Each With a Clear Mandate</h4>
+<div class="grid md:grid-cols-1 gap-6 mb-6">
+  <div class="bg-white rounded-xl cs overflow-hidden">
+    <div class="bg-black px-6 py-5">
+      <div class="text-brand-orange text-xs font-bold uppercase tracking-widest mb-1">Phase 01 &nbsp;&middot;&nbsp; First 90 Days</div>
+      <div class="text-white text-2xl font-black">Protect</div>
+      <div class="text-white text-sm mt-1 opacity-80">A unified, governed AI system</div>
+    </div>
+    <div class="p-6">
+      <p class="text-sm text-brand-graphite mb-4 leading-relaxed">Infrastructure-first. Phase 01 closes the liability exposure that already exists and activates the integration between tools already deployed and already paid for. It builds the governance foundation that makes every subsequent phase faster, safer, and more defensible. Phase 01 scope is consistent regardless of which Phase 02 path the firm selects; it is the prerequisite for everything that follows.</p>
+      <p class="text-sm text-brand-graphite mb-4 leading-relaxed">The scope defined by Discovery will determine the precise sequencing, but Phase 01 will address:</p>
+      <ul class="text-sm text-brand-graphite space-y-2">
+        <li class="flex items-start gap-3"><span class="text-brand-orange mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">ChatGPT Enterprise governance:</strong> Written AI policy, approved use cases, prohibited activities, prompt frameworks specific to trademark and copyright work, and a human-verification protocol covering all AI-assisted output before client delivery or court filing.</span></li>
+        <li class="flex items-start gap-3"><span class="text-brand-orange mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">NetDocuments ndConnect MCP activation:</strong> ChatGPT Enterprise queries the firm&apos;s document repository within existing permissions and ethical walls, with zero file transfer, eliminating the active privilege-contamination risk at $0 additional software cost.</span></li>
+        <li class="flex items-start gap-3"><span class="text-brand-orange mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">Copilot M365 ethical-wall audit:</strong> Matter-level permission structure reviewed and configured to enforce ethical walls across multi-client scenarios.</span></li>
+        <li class="flex items-start gap-3"><span class="text-brand-orange mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">NIST AI Risk Management Framework alignment:</strong> Documentation required for TRAIGA safe-harbor protection, with audit trail infrastructure in place.</span></li>
+        <li class="flex items-start gap-3"><span class="text-brand-orange mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">Jurisdiction-specific attorney training:</strong> Texas Opinion 705 verification requirements, federal court AI disclosure rules, and separate sessions for California-based and DC-based attorneys.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white rounded-xl cs overflow-hidden border-2 border-brand-orange mb-6">
+  <div class="px-6 py-5" style="background:#C9640B">
+    <div class="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-80">Phase 02 &nbsp;&middot;&nbsp; Months 2&ndash;8</div>
+    <div class="text-white text-2xl font-black">Propel</div>
+    <div class="text-white text-sm mt-1 opacity-80">High-intent client inquiries captured in minutes. Operational efficiency compounding.</div>
+  </div>
+  <div class="p-6">
+    <p class="text-sm text-brand-graphite mb-4 leading-relaxed">Phase 02 builds the capabilities the current tool stack does not address. The Discovery roadmap will determine which capability areas represent the highest-impact opportunities and in what sequence to pursue them, based on the workflow map, the firm&apos;s matter mix, and adoption readiness. The scope and investment level will be defined after Discovery, not before.</p>
+    <p class="text-sm text-brand-graphite mb-4 leading-relaxed">The following capability areas are likely to be evaluated and sequenced as part of the Phase 02 roadmap:</p>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="p-4 rounded-lg" style="background:rgba(0,0,0,.04)">
+        <div class="font-bold text-brand-black text-sm mb-2">Client Intake &amp; Acquisition Infrastructure</div>
+        <p class="text-xs text-brand-graphite">The systems that ensure high-intent inquiries from brand managers and in-house IP counsel are captured, qualified, and responded to at any hour, integrated with the firm&apos;s matter management workflow and conflicts pre-screen process.</p>
+      </div>
+      <div class="p-4 rounded-lg" style="background:rgba(0,0,0,.04)">
+        <div class="font-bold text-brand-black text-sm mb-2">Legal Research &amp; Drafting Capability</div>
+        <p class="text-xs text-brand-graphite">Citation-verified research integrated with the firm&apos;s existing document and matter management infrastructure. Natural upgrade pathways through existing vendor relationships will be evaluated as part of the Discovery roadmap.</p>
+      </div>
+      <div class="p-4 rounded-lg" style="background:rgba(0,0,0,.04)">
+        <div class="font-bold text-brand-black text-sm mb-2">Workflow Automation &amp; Practice Integration</div>
+        <p class="text-xs text-brand-graphite">Activating workflow automation capabilities already available within the current stack, connecting systems that currently operate in silos, and identifying where custom module development delivers the highest return on the firm&apos;s existing infrastructure investment.</p>
+      </div>
+      <div class="p-4 rounded-lg" style="background:rgba(0,0,0,.04)">
+        <div class="font-bold text-brand-black text-sm mb-2">DMS-Integrated AI Workflows</div>
+        <p class="text-xs text-brand-graphite">Deepening the connection between the firm&apos;s institutional knowledge in NetDocuments and the AI tools in active use, including custom indexing for trademark-specific matter types, clause libraries, and precedent retrieval.</p>
+      </div>
+      <div class="p-4 rounded-lg" style="background:rgba(0,0,0,.04)">
+        <div class="font-bold text-brand-black text-sm mb-2">Regulatory Intelligence &amp; Tracking</div>
+        <p class="text-xs text-brand-graphite">Building the capability to monitor and synthesize developments in technology law, privacy regulation, and AI law that directly affect the firm&apos;s ability to advise clients quickly and with confidence on complex, evolving matters.</p>
+      </div>
+      <div class="p-4 rounded-lg" style="background:rgba(0,0,0,.04)">
+        <div class="font-bold text-brand-black text-sm mb-2">Governance Maturation</div>
+        <p class="text-xs text-brand-graphite">Completing and institutionalizing the governance program initiated in Phase 01, including full TRAIGA compliance documentation, ongoing oversight protocols, and a regular review cadence aligned with how quickly the regulatory environment is evolving.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white rounded-xl cs overflow-hidden">
+  <div class="px-6 py-5" style="background:#8B4507">
+    <div class="text-white text-xs font-bold uppercase tracking-widest mb-1 opacity-80">Phase 03 &nbsp;&middot;&nbsp; Months 9&ndash;12</div>
+    <div class="text-white text-2xl font-black">Presence</div>
+    <div class="text-white text-sm mt-1 opacity-80">The firm&apos;s authority becomes machine-readable.</div>
+  </div>
+  <div class="p-6">
+    <p class="text-sm text-brand-graphite mb-4 leading-relaxed">Phase 03 converts decades of earned authority into AI-search visibility, and completes the compliance program that makes the firm&apos;s AI use fully defensible and auditable. Fewer than 5% of law firms have any formal strategy for AI-search visibility. Pirkey Barber&apos;s 20 WTR 1000-ranked attorneys, Chambers USA recognition, and Best Lawyers designations are precisely the authority signals AI platforms prefer to cite. Phase 03 structures those signals for machine readability. Phase 03 scope is consistent regardless of which Phase 02 path the firm selects.</p>
+    <ul class="text-sm text-brand-graphite space-y-2">
+      <li class="flex items-start gap-3"><span style="color:#8B4507" class="mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">AEO content architecture:</strong> LegalService, Attorney/Person, FAQPage, and LocalBusiness schema markup on all practice-area pages and attorney profiles, with answer-first content structure optimized for AI-crawler extraction.</span></li>
+      <li class="flex items-start gap-3"><span style="color:#8B4507" class="mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">GEO citation building:</strong> Authoritative newswire press releases, legal publication placements, and entity-signal reinforcement to build the off-site citation profile that AI platforms use as a credibility signal.</span></li>
+      <li class="flex items-start gap-3"><span style="color:#8B4507" class="mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">Authority activation:</strong> WTR 1000 rankings, Chambers USA recognition, and Best Lawyers designations structured as machine-readable entity signals, converting existing recognition into AI-platform citation signals.</span></li>
+      <li class="flex items-start gap-3"><span style="color:#8B4507" class="mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">AI citation monitoring:</strong> Tracking the firm&apos;s brand citation performance across ChatGPT, Gemini, and Perplexity, with competitive share monitoring and a content roadmap for Year 2.</span></li>
+      <li class="flex items-start gap-3"><span style="color:#8B4507" class="mt-1 shrink-0">&#9656;</span><span><strong class="text-brand-black">Full TRAIGA compliance documentation:</strong> All NIST AI RMF deliverables finalized and audit-ready, with ongoing governance review protocols in place.</span></li>
+    </ul>
+  </div>
+</div>
+</section>
+<div class="sh rounded-xl overflow-hidden cs"><img src="https://cdn.jsdelivr.net/gh/biel-pitman/archificials-assessments@v3.0.0/reports/images/law-firm/section-market.webp" alt=""><div class="ov"><div class="ac"></div><h3>Where Pirkey Barber Is, and Where It Could Be</h3><p>Current Position &middot; The Available Path &middot; Archificials as Partner</p></div></div>
+<section id="closing">
+<h3 class="text-3xl font-bold text-brand-black mb-4 border-l-4 border-brand-orange pl-4">10. Where Pirkey Barber Is, and Where It Could Be</h3>
+
+<div class="grid md:grid-cols-3 gap-6 mb-10">
+  <div class="bg-white p-6 rounded-xl cs border-t-4 border-black">
+    <div class="text-xs font-bold text-brand-grey uppercase tracking-wide mb-3">Current Position</div>
+    <div class="font-bold text-brand-black text-lg mb-3">Invested, Ungoverned</div>
+    <p class="text-sm text-brand-graphite leading-relaxed mb-3">Five AI tools deployed with real subscription commitments. ChatGPT Enterprise rolling out without a governance framework. NetDocuments and ChatGPT Enterprise sitting side by side without the integration that connects them. Copilot running without confirmed ethical-wall configuration. Client intake operating on a 2&ndash;5 business-day cycle while 35&ndash;40% of high-intent prospects arrive after hours. No AEO or GEO infrastructure despite 20 WTR 1000-ranked attorneys generating citation-worthy authority signals daily.</p>
+    <p class="text-sm text-brand-graphite">The tools are correct. The gap is governance, integration, and the workflows that turn subscription costs into practice outcomes.</p>
+  </div>
+  <div class="bg-white p-6 rounded-xl cs border-t-4" style="border-top-color:#C9640B">
+    <div class="text-xs font-bold text-brand-grey uppercase tracking-wide mb-3">The Available Path</div>
+    <div class="font-bold text-brand-black text-lg mb-3">Governed, Integrated, AI-Cited</div>
+    <p class="text-sm text-brand-graphite leading-relaxed mb-3">A governed AI system where every tool deployment has a written policy, verified outputs, and auditable evidence of compliance with ABA Opinion 512, Texas Opinion 705, and TRAIGA. ChatGPT Enterprise connected to NetDocuments within existing permissions, giving every attorney access to decades of institutional knowledge without touching a file or creating a privilege risk. After-hours intake capturing brand-manager and GC inquiries within minutes. Citation-verified research integrated with the matter management workflow the firm already uses.</p>
+    <p class="text-sm text-brand-graphite">And when a GC types "trademark counsel Austin" into ChatGPT or Perplexity: Pirkey Barber, cited by name, as the authoritative answer.</p>
+  </div>
+  <div class="bg-white p-6 rounded-xl cs border-t-4" style="border-top-color:#8B4507">
+    <div class="text-xs font-bold text-brand-grey uppercase tracking-wide mb-3">What Bridges the Gap</div>
+    <div class="font-bold text-brand-black text-lg mb-3">One Scoped Engagement First</div>
+    <p class="text-sm text-brand-graphite leading-relaxed mb-3">The path from where the firm is to where it could be starts with a single scoped engagement that defines the roadmap before any implementation commitment is made. Discovery produces a workflow map, a compliance audit, a prioritized roadmap, and a financial model, all built on the firm&apos;s specific infrastructure and matter mix, not on generic legal AI benchmarks.</p>
+    <p class="text-sm text-brand-graphite">The committee reviews the deliverables, validates the priorities, and decides what to build and when.</p>
+  </div>
+</div>
+
+<div class="bg-black text-white p-8 rounded-xl cs">
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <div class="text-brand-orange font-bold uppercase tracking-widest text-sm mb-3">&#9881; About Archificials</div>
+      <div class="text-white text-2xl font-bold font-serif mb-4">Enterprise AI Readiness &amp; Implementation for Law Firms</div>
+      <p class="text-sm leading-relaxed mb-4" style="color:#EBEBEB">Archificials operates in the implementation, integration, and customization layer that neither SaaS vendors nor generic consultants occupy. We work with law firms, architecture and engineering firms, and educational institutions, bringing 18 years of practice experience and deep AI implementation expertise to organizations where the stakes of getting it wrong are high.</p>
+      <p class="text-sm leading-relaxed" style="color:#EBEBEB">Every engagement is vendor-agnostic. Revenue comes from engagement fees only. No software commissions. No referral arrangements. Every tool recommendation is based on what the firm actually needs, aligned with its business requirements and the board&apos;s vision for responsible AI adoption.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-brand-orange font-bold text-sm mb-1">vs. Big 4</div><div class="text-xs" style="color:#EBEBEB">12&ndash;18 months, $500,000+. We deliver in 8&ndash;16 weeks at a fraction of the cost, sized for organizations like Pirkey Barber.</div></div>
+      <div class="p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-brand-orange font-bold text-sm mb-1">vs. SaaS Vendors</div><div class="text-xs" style="color:#EBEBEB">They sell licenses. We map workflows, configure integrations, build governance frameworks, and manage adoption across your teams.</div></div>
+      <div class="p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-brand-orange font-bold text-sm mb-1">vs. IT Shops</div><div class="text-xs" style="color:#EBEBEB">They bring infrastructure management. We bring AI strategy, workflow design, prompt engineering, and legal-domain knowledge grounded in practice experience.</div></div>
+      <div class="p-4 rounded-lg" style="background:rgba(255,255,255,.06)"><div class="text-brand-orange font-bold text-sm mb-1">Accountability</div><div class="text-xs" style="color:#EBEBEB">Fixed-fee engagements with defined deliverables. The committee receives the roadmap and financial model before any implementation spend is committed. No open-ended retainers.</div></div>
+    </div>
+  </div>
+  <div class="mt-6 pt-6 border-t border-white/20">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="text-white font-bold text-sm">Ready to validate the roadmap?</div>
+        <div class="text-xs mt-1" style="color:#808182">archificials.com &nbsp;&middot;&nbsp; Austin, Texas &nbsp;&middot;&nbsp; Vendor-agnostic. No software commissions.</div>
+      </div>
+      <div class="text-brand-orange font-bold text-sm">Discovery &amp; Strategy &nbsp;&middot;&nbsp; $10,000 fixed &nbsp;&middot;&nbsp; 2&ndash;4 weeks</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer class="border-t border-brand-platinum pt-8 pb-4 mt-12">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+    <div><div class="font-bold text-brand-black text-sm">Archificials</div><div class="text-xs text-brand-grey mt-1">Enterprise AI Readiness &amp; Implementation for Law Firms &nbsp;&middot;&nbsp; Austin, Texas</div><div class="text-xs text-brand-grey mt-1">archificials.com &nbsp;&middot;&nbsp; Vendor-agnostic. No software commissions.</div></div>
+    <div class="text-right"><div class="text-xs text-brand-grey">Prepared: June 2026</div><div class="text-xs text-brand-grey mt-1">Confidential, Pirkey Barber PLLC</div><div class="text-xs text-brand-grey mt-1">Strategic guidance only. Not legal advice.</div></div>
+  </div>
+</footer>
+</main>
+<script>
+const wL=(s,m)=>{const w=s.split(' '),l=[];let c='';w.forEach(x=>{if((c+' '+x).trim().length>m){if(c)l.push(c.trim());c=x;}else c=(c+' '+x).trim();});if(c)l.push(c.trim());return l;};
+const tt={callbacks:{title:i=>{let l=i[0].chart.data.labels[i[0].dataIndex];return Array.isArray(l)?l.join(' '):l;}}};
+new Chart(document.getElementById('marketChart'),{type:'doughnut',data:{labels:['Using AI, No Formal Policy','Using AI, Formal Policy','Not Using AI'],datasets:[{data:[70,9,21],backgroundColor:['#C9640B','#E8A84C','#808182'],borderWidth:0,hoverOffset:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{family:'Inter',size:11},color:'#333333',padding:12}},tooltip:tt},cutout:'62%'}});
+new Chart(document.getElementById('readinessChart'),{type:'radar',data:{labels:['Operational Efficiency','Client Acquisition','Digital Visibility','Practice Readiness'].map(l=>wL(l,14)),datasets:[{label:'Pirkey Barber PLLC',data:[58,42,78,54],backgroundColor:'rgba(201,100,11,0.13)',borderColor:'#C9640B',pointBackgroundColor:'#000000',pointBorderColor:'#C9640B',borderWidth:2},{label:'Enterprise IP Benchmark',data:[55,50,58,52],backgroundColor:'rgba(0,0,0,0.04)',borderColor:'#808182',pointBackgroundColor:'#808182',pointBorderColor:'#808182',borderWidth:2,borderDash:[4,4]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{family:'Inter',size:11},color:'#333333'}},tooltip:tt},scales:{r:{min:0,max:100,ticks:{stepSize:25,font:{family:'Inter',size:10},color:'#808182',backdropColor:'transparent'},grid:{color:'rgba(0,0,0,0.08)'},pointLabels:{font:{family:'Inter',size:11,weight:'600'},color:'#333333'},angleLines:{color:'rgba(0,0,0,0.08)'}}}}});
+</script>
+</body>
+</html>

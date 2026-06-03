@@ -1,7 +1,7 @@
 /* Archificials | Pirkey Barber AI Readiness Report | archificials.com */
 (function () {
   var ROOT_ID = 'pirkey-barber';
-  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/biel-pitman/law-firm-assessment-v2@v2.4.0';
+  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/biel-pitman/law-firm-assessment-v2@v2.5.0';
   var HTML_URL = CDN_BASE + '/dist/pirkey-barber.html';
 
   function init() {

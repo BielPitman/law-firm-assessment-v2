@@ -1,7 +1,7 @@
 /* Archificials | HB&H AI Strategy Presentation | archificials.com */
 (function () {
   var ROOT_ID = 'hb-strategy';
-  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/biel-pitman/law-firm-assessment-v2@v2.5.6';
+  var CDN_BASE = 'https://cdn.jsdelivr.net/gh/biel-pitman/law-firm-assessment-v2@v2.5.7';
   var HTML_URL = CDN_BASE + '/dist/hb-strategy.html';
 
   function init() {
